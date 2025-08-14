@@ -21,9 +21,7 @@
         "Built cross-platform mobile apps for Android and iOS using React Native and Expo",
         "Established complete CI/CD pipeline automation with EAS for seamless deployment",
         "Collaborated closely with design and product teams using fast iteration cycles",
-        "Developed real-time audio processing capabilities with WebRTC integration",
-        "Built comprehensive testing suite with 90%+ coverage using Jest and Playwright",
-        "Optimized performance for low-latency real-time features across mobile platforms"
+        "Built comprehensive testing suite using Jest and React Native Testing Library"
       ],
       "externalLinks": [
         {
@@ -56,7 +54,7 @@
         "Multi-layer Architecture"
       ],
       "achievements": [
-        "Led frontend recreation from scratch using modern React patterns",
+        "Rebuilt frontend from scratch using modern React patterns",
         "Architected easily testable multi-layer architecture agnostic from UI framework",
         "Built comprehensive custom design system with Storybook",
         "Mentored junior engineers on best practices and architectural patterns",
