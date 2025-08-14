@@ -14,9 +14,10 @@ export class AboutPresenter {
         tagline: 'Crafting exceptional digital experiences with modern web technologies',
         avatarSrc: '/profile-photo.png',
         bio: [
-          "I'm a passionate Senior Frontend Engineer at Aveni, based in the vibrant tech scene of London. With a deep love for creating exceptional user experiences, I transform complex ideas into beautiful, functional, and accessible web applications.",
+          "I'm a passionate Senior Frontend Engineer, based in UK. With a deep love for creating exceptional user experiences, I transform complex ideas into beautiful, functional, and accessible web applications.",
           'My journey in web development is driven by curiosity and continuous learning. I specialize in React ecosystems, TypeScript, and modern frontend architectures, always staying at the forefront of emerging technologies and best practices.',
-          "When I'm not coding, you'll find me contributing to open-source projects, sharing knowledge with the developer community, or exploring the latest trends in web development. I believe in building not just great software, but also great teams and communities.",
+          'Beyond coding, I find inspiration in the kitchen, experimenting with flavors and techniques from different cuisines, and through traveling the world, discovering new cultures and perspectives that enrich both my personal and professional outlook.',
+          'These diverse experiences have taught me that creativity, attention to detail, and genuine curiosity are universal ingredients for success - whether building great software, exploring new destinations, or sharing a meal with others.',
         ],
       },
       socialLinks: [],
