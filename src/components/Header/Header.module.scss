@@ -1,0 +1,155 @@
+.root {
+  background: var(--mantine-color-background);
+  border-bottom: 1px solid var(--mantine-color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--mantine-z-index-app);
+  backdrop-filter: blur(8px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--mantine-color-text);
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+
+  @include mantine.hover {
+    color: var(--mantine-primary-color-filled);
+  }
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    gap: 1rem;
+  }
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: var(--mantine-color-text-dimmed);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 150ms ease-in-out;
+  position: relative;
+
+  @include mantine.hover {
+    color: var(--mantine-color-text);
+    background-color: var(--mantine-color-gray-0);
+  }
+  
+  @include mantine.dark {
+    @include mantine.hover {
+      background-color: var(--mantine-color-dark-6);
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--mantine-primary-color-filled);
+    outline-offset: 2px;
+  }
+}
+
+.navLinkActive {
+  color: var(--mantine-primary-color-filled);
+  background-color: var(--mantine-color-blue-0);
+
+  @include mantine.hover {
+    color: var(--mantine-color-blue-7);
+    background-color: var(--mantine-color-blue-1);
+  }
+  
+  @include mantine.dark {
+    background-color: var(--mantine-color-dark-6);
+    
+    @include mantine.hover {
+      background-color: var(--mantine-color-dark-5);
+    }
+  }
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.burgerButton {
+  display: none;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    display: block;
+  }
+}
+
+.navListMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navListOpen {
+  transform: translateX(0);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0 0 0 / 50%);
+  z-index: calc(var(--z-modal) - 1);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    display: block;
+  }
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+  .navList {
+    display: none;
+  }
+}
+
+.navListMobile .navLink {
+  display: block;
+  padding: 1rem;
+  font-size: 1.125rem;
+  text-align: left;
+  width: 100%;
+}

@@ -1,0 +1,112 @@
+{
+  "professional": [
+    {
+      "id": "aveni-meeting-assistant",
+      "title": "Aveni Meeting Assistant",
+      "subtitle": "Mobile-driven meeting capture and AI note generation",
+      "shortDescription": "The Aveni Meeting Assistant is an AI-powered mobile app that allows financial advisors to record face-to-face meetings with clients and automatically process them for real-time insights, compliance monitoring, and intelligent summaries.",
+      "longDescription": "Led the entire app development from conception to production, building cross-platform mobile applications for both Android and iOS using React Native and Expo, ensuring consistent user experience across all devices.\nEstablished and maintained the complete CI/CD pipeline automation for deployment using EAS (Expo Application Services), enabling seamless and reliable app distribution to both app stores. Worked with fast iterations and close collaboration with design and product management teams to ship the best possible user experience, ensuring rapid delivery while maintaining high quality standards.",
+      "role": "Lead Frontend Engineer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "EAS",
+        "CI/CD",
+        "Jest",
+        "React Native Testing Library"
+      ],
+      "achievements": [
+        "Led the entire app development from conception to production",
+        "Built cross-platform mobile apps for Android and iOS using React Native and Expo",
+        "Established complete CI/CD pipeline automation with EAS for seamless deployment",
+        "Collaborated closely with design and product teams using fast iteration cycles",
+        "Developed real-time audio processing capabilities with WebRTC integration",
+        "Built comprehensive testing suite with 90%+ coverage using Jest and Playwright",
+        "Optimized performance for low-latency real-time features across mobile platforms"
+      ],
+      "externalLinks": [
+        {
+          "type": "linkedin",
+          "label": "LinkedIn Announcement",
+          "url": "https://www.linkedin.com/posts/aveni-ai_just-dropped-you-asked-and-we-listened-activity-7226967863754960898-keFg"
+        },
+        {
+          "type": "website",
+          "label": "Learn More",
+          "url": "https://aveni.ai/blog/aveni-meeting-assistant-now-available/"
+        }
+      ]
+    },
+    {
+      "id": "aveni-detect",
+      "title": "Aveni Detect",
+      "subtitle": "100% AI-powered QA assessment",
+      "shortDescription": "Aveni Detect is an advanced AI detection system that automatically analyzes financial communications, documents, emails, and conversations to identify potential compliance risks and regulatory issues before they become problems.",
+      "longDescription": "Worked closely with the technical lead to recreate the entire frontend from scratch, implementing modern patterns and easily testable multi-layer architecture that is agnostic from the UI framework used.\nBuilt a comprehensive custom design system using Storybook, ensuring consistency and reusability across the application while improving development velocity and maintaining design standards. Mentored junior engineers throughout the development process and implemented a robust testing strategy encompassing unit testing with Jest, integration testing, and end-to-end testing with Playwright.",
+      "role": "Senior Frontend Engineer",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Styled Components",
+        "Storybook",
+        "Jest",
+        "React Testing Library",
+        "Playwright",
+        "Multi-layer Architecture"
+      ],
+      "achievements": [
+        "Led frontend recreation from scratch using modern React patterns",
+        "Architected easily testable multi-layer architecture agnostic from UI framework",
+        "Built comprehensive custom design system with Storybook",
+        "Mentored junior engineers on best practices and architectural patterns",
+        "Implemented complete testing strategy: unit, integration, and e2e tests",
+        "Achieved high test coverage and application reliability"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "Product Overview",
+          "url": "https://aveni.ai/aveni-detect/"
+        }
+      ]
+    },
+    {
+      "id": "aveni-assist",
+      "title": "Aveni Assist",
+      "subtitle": "AI assistant for client admin automation",
+      "shortDescription": "Aveni Assist is an intelligent assistance platform that provides financial advisors with AI-driven insights, automated recommendations, and comprehensive tools to enhance client interactions and improve advisory services.",
+      "longDescription": "Led the recreation of the entire frontend from scratch, gradually rebuilding the application using modern React patterns and architecture to improve maintainability and performance.\nImplemented a component-driven development approach using modern technologies including React, TypeScript, SCSS, and Mantine UI library for consistent design and user experience. Ensured seamless migration from the legacy system while maintaining business continuity and improving overall application performance and developer experience.",
+      "role": "Senior Frontend Engineer",
+      "tags": [
+        "React",
+        "TypeScript",
+        "SCSS",
+        "Mantine",
+        "Frontend Architecture",
+        "Component-driven Development",
+        "CI/CD improvements",
+        "Jest",
+        "React Testing Library",
+        "React Query"
+      ],
+      "achievements": [
+        "Led complete frontend recreation from scratch using modern React patterns",
+        "Implemented gradual migration strategy ensuring business continuity",
+        "Built responsive and accessible UI components with Mantine",
+        "Architected scalable component-driven development approach",
+        "Optimized application performance and developer experience",
+        "Delivered seamless transition from legacy system to modern architecture",
+        "Implemented CI/CD improvements for faster and more reliable deployments"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "Product Overview",
+          "url": "https://aveni.ai/aveni-assist/"
+        }
+      ]
+    }
+  ],
+  "personal": []
+}

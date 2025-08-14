@@ -1,0 +1,115 @@
+.root {
+  background: linear-gradient(135deg, rgb(255 255 255 / 90%) 0%, rgb(248 250 252 / 90%) 100%);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-lg);
+  transition: all 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  @include mantine.hover {
+    background: linear-gradient(135deg, rgb(255 255 255 / 95%) 0%, rgb(248 250 252 / 95%) 100%);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 15%);
+    transform: translateY(-4px);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @include mantine.hover {
+    .arrowIcon {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+  }
+}
+
+.root {
+  @include mantine.dark {
+    background: linear-gradient(135deg, rgb(51 65 85 / 90%) 0%, rgb(30 41 59 / 90%) 100%);
+    border: none;
+
+    @include mantine.hover {
+      background: linear-gradient(135deg, rgb(51 65 85 / 95%) 0%, rgb(30 41 59 / 95%) 100%);
+      box-shadow: 0 8px 32px rgb(37 99 235 / 20%);
+    }
+  }
+}
+
+.header {
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.title {
+  color: var(--mantine-color-text);
+  font-weight: 600;
+  line-height: var(--mantine-line-height-md);
+  margin-bottom: var(--mantine-spacing-sm);
+}
+
+.description {
+  color: var(--mantine-color-dimmed);
+  line-height: var(--mantine-line-height);
+  margin-bottom: 0;
+}
+
+.tagList {
+  margin: var(--mantine-spacing-md) 0;
+}
+
+.tag {
+  transition: all 0.2s ease;
+
+  @include mantine.hover {
+    transform: translateY(-1px);
+  }
+}
+
+.footer {
+  padding-top: var(--mantine-spacing-md);
+  margin-top: auto;
+}
+
+.arrowIcon {
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  color: var(--mantine-color-blue-6);
+}
+
+
+/* Animation keyframes */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.root {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+@include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+  .root {
+    padding: var(--mantine-spacing-md);
+  }
+
+  .header {
+    margin-bottom: var(--mantine-spacing-sm);
+  }
+
+  .tagList {
+    margin: var(--mantine-spacing-sm) 0;
+  }
+
+  .footer {
+    padding-top: var(--mantine-spacing-sm);
+  }
+}

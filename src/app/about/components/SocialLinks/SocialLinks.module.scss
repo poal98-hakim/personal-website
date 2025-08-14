@@ -1,0 +1,8 @@
+.socialLink {
+  text-decoration: none;
+  color: inherit;
+  
+  @include mantine.hover {
+    opacity: 0.8;
+  }
+}

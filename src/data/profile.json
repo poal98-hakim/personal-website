@@ -1,0 +1,35 @@
+{
+  "name": "Hakim Abdelcadir",
+  "bio": "Senior Frontend Engineer at Aveni. Passionate about React, TypeScript, and building user-centric AI-powered web applications.",
+  "location": "London, UK",
+  "email": "hakim98bologna@yahoo.it",
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "platform": "Open Source Platform",
+      "description": "Explore my repositories, contributions, and open-source projects showcasing modern web development practices.",
+      "href": "https://github.com/poal98-hakim",
+      "icon": "github",
+      "color": "dark",
+      "stats": "Personal Projects"
+    },
+    {
+      "name": "LinkedIn",
+      "platform": "Professional Network",
+      "description": "Connect professionally, view my work experience, and stay updated with my career journey and insights.",
+      "href": "https://www.linkedin.com/in/hakim-abdelcadir-31497814a/",
+      "icon": "linkedin",
+      "color": "blue",
+      "stats": "Senior Frontend Engineer"
+    },
+    {
+      "name": "Stack Overflow",
+      "platform": "Developer Community",
+      "description": "See my contributions to the developer community through questions, answers, and knowledge sharing.",
+      "href": "https://stackoverflow.com/users/15471452/hakim-abdelcadir",
+      "icon": "stackoverflow",
+      "color": "orange",
+      "stats": "Active Contributor"
+    }
+  ]
+}

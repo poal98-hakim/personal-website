@@ -1,0 +1,319 @@
+.homePage {
+  padding: var(--mantine-spacing-xl) 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroSection {
+  padding: calc(var(--mantine-spacing-xl) * 2) 0;
+  text-align: center;
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: calc(var(--mantine-spacing-xl) + var(--mantine-spacing-lg)) 0;
+  }
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    padding: var(--mantine-spacing-xl) 0;
+  }
+}
+
+.heroAvatar {
+  border: 4px solid rgb(37 99 235 / 10%);
+  transition: all 0.3s ease;
+  
+  @include mantine.hover {
+    transform: scale(1.05);
+    border-color: rgb(37 99 235 / 30%);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 20%);
+  }
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  background: linear-gradient(135deg, var(--mantine-color-text) 0%, rgb(37 99 235 / 80%) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--mantine-spacing-md) !important;
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 3rem !important;
+  }
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    font-size: 2.5rem !important;
+  }
+}
+
+.heroSubtitle {
+  font-weight: 500;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 1.125rem !important;
+  }
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    font-size: 1rem !important;
+  }
+}
+
+.heroDescription {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: var(--mantine-line-height);
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 1rem !important;
+  }
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    font-size: 0.875rem !important;
+  }
+}
+
+.ctaSection {
+  margin-top: var(--mantine-spacing-xl);
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    
+    button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+.primaryCta {
+  background: linear-gradient(135deg, var(--mantine-color-blue-6) 0%, var(--mantine-color-blue-5) 100%);
+  border: none;
+  box-shadow: 0 4px 16px rgb(37 99 235 / 30%);
+  transition: all 0.3s ease;
+  
+  @include mantine.hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 40%);
+  }
+}
+
+.secondaryCta {
+  background: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(37 99 235 / 20%);
+  transition: all 0.3s ease;
+  
+  @include mantine.hover {
+    background: rgb(255 255 255 / 95%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 15%);
+  }
+  
+  @include mantine.dark {
+    background: rgb(51 65 85 / 80%);
+    border: 1px solid rgb(71 85 105 / 30%);
+    
+    @include mantine.hover {
+      background: rgb(51 65 85 / 95%);
+      border-color: rgb(37 99 235 / 40%);
+    }
+  }
+}
+
+
+.statsSection {
+  padding: calc(var(--mantine-spacing-xl) * 2) 0;
+  margin-top: var(--mantine-spacing-xl);
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: calc(var(--mantine-spacing-xl) + var(--mantine-spacing-lg)) 0;
+  }
+}
+
+.statCard {
+  background: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 90%) 0%,
+    rgb(248 250 252 / 90%) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(203 213 225 / 20%);
+  padding: var(--mantine-spacing-xl) var(--mantine-spacing-lg);
+  transition: all 0.3s ease;
+  min-width: 180px;
+  
+  @include mantine.hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 15%);
+  }
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    min-width: 150px;
+    padding: var(--mantine-spacing-lg) var(--mantine-spacing-md);
+  }
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    min-width: 120px;
+    padding: var(--mantine-spacing-md) var(--mantine-spacing-xs);
+  }
+}
+
+.statCard {
+  @include mantine.dark {
+    background: linear-gradient(
+      135deg,
+      rgb(51 65 85 / 90%) 0%,
+      rgb(30 41 59 / 90%) 100%
+    );
+    border: 1px solid rgb(71 85 105 / 20%);
+    
+    @include mantine.hover {
+      box-shadow: 0 8px 32px rgb(37 99 235 / 20%);
+    }
+  }
+}
+
+.statNumber {
+  background: linear-gradient(135deg, var(--mantine-color-blue-6) 0%, var(--mantine-color-blue-5) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.socialSection {
+  padding: calc(var(--mantine-spacing-xl) * 2) 0;
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: calc(var(--mantine-spacing-xl) + var(--mantine-spacing-lg)) 0;
+  }
+}
+
+.socialTitle {
+  margin-bottom: var(--mantine-spacing-xl);
+  background: linear-gradient(135deg, var(--mantine-color-text) 0%, rgb(37 99 235 / 80%) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 1.75rem !important;
+  }
+}
+
+.socialLinks {
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.socialLink {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  
+  @include mantine.hover {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-2px);
+  }
+}
+
+.socialCard {
+  background: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(203 213 225 / 20%);
+  padding: var(--mantine-spacing-lg);
+  transition: all 0.3s ease;
+  min-width: 220px;
+  
+  @include mantine.hover {
+    background: rgb(255 255 255 / 95%);
+    border-color: rgb(37 99 235 / 20%);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 15%);
+  }
+  
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+  }
+}
+
+.socialCard {
+  @include mantine.dark {
+    background: rgb(51 65 85 / 80%);
+    border: 1px solid rgb(71 85 105 / 20%);
+    
+    @include mantine.hover {
+      background: rgb(51 65 85 / 95%);
+      border-color: rgb(37 99 235 / 30%);
+      box-shadow: 0 8px 32px rgb(37 99 235 / 20%);
+    }
+  }
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.heroSection {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.heroAvatar {
+  animation: fade-in-scale 1s ease-out 0.2s both;
+}
+
+.heroContent {
+  animation: fade-in-up 0.8s ease-out 0.3s both;
+}
+
+.ctaSection {
+  animation: fade-in-up 0.8s ease-out 0.4s both;
+}
+
+.statsSection {
+  animation: fade-in-up 0.8s ease-out 0.5s both;
+}
+
+.socialSection {
+  animation: fade-in-up 0.8s ease-out 0.6s both;
+}
+
+.statCard {
+  animation: fade-in-scale 0.6s ease-out both;
+  
+  &:nth-child(1) { animation-delay: 0.7s; }
+  &:nth-child(2) { animation-delay: 0.8s; }
+  &:nth-child(3) { animation-delay: 0.9s; }
+}

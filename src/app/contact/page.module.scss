@@ -1,0 +1,364 @@
+.contactPage {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.heroSection {
+  padding: 4rem 0;
+  text-align: center;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: 3rem 0;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    padding: 2rem 0;
+  }
+}
+
+.heroIcon {
+  margin-bottom: 1rem;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.messageIcon {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.sendIcon {
+  animation: bounce 2s ease-in-out infinite 0.3s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.05);
+  }
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  background: linear-gradient(135deg, var(--mantine-color-text) 0%, rgb(37 99 235 / 80%) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem !important;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 2.75rem !important;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    font-size: 2.25rem !important;
+  }
+}
+
+.heroSubtitle {
+  font-weight: 500;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 1.125rem !important;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    font-size: 1rem !important;
+  }
+}
+
+.heroDescription {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 1rem !important;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    font-size: 0.875rem !important;
+  }
+}
+
+.contentSection {
+  margin-top: 2rem;
+}
+
+.primaryContactCard {
+  background: linear-gradient(135deg, rgb(255 255 255 / 95%) 0%, rgb(248 250 252 / 95%) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(203 213 225 / 20%);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+
+  @include mantine.hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgb(37 99 235 / 15%);
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: 2rem;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    padding: 1.5rem;
+  }
+}
+
+[data-mantine-color-scheme='dark'] .primaryContactCard {
+  background: linear-gradient(135deg, rgb(51 65 85 / 95%) 0%, rgb(30 41 59 / 95%) 100%);
+  border: 1px solid rgb(71 85 105 / 20%);
+
+  @include mantine.hover {
+    box-shadow: 0 12px 40px rgb(37 99 235 / 20%);
+  }
+}
+
+.emailSection {
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem !important;
+  }
+}
+
+.emailIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    var(--mantine-color-blue-6) 0%,
+    var(--mantine-color-blue-5) 100%
+  );
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.emailIcon {
+  color: white;
+  filter: drop-shadow(0 2px 8px rgb(37 99 235 / 30%));
+}
+
+.emailContent {
+  flex: 1;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.emailTitle {
+  background: linear-gradient(135deg, var(--mantine-color-text) 0%, rgb(37 99 235 / 80%) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.emailButton {
+  background: linear-gradient(
+    135deg,
+    var(--mantine-color-blue-6) 0%,
+    var(--mantine-color-blue-5) 100%
+  );
+  border: none;
+  box-shadow: 0 4px 16px rgb(37 99 235 / 30%);
+  transition: all 0.3s ease;
+
+  @include mantine.hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 40%);
+  }
+}
+
+.socialSection {
+  margin-top: 3rem;
+}
+
+.socialHeader {
+  margin-bottom: 2rem;
+}
+
+.socialTitle {
+  background: linear-gradient(135deg, var(--mantine-color-text) 0%, rgb(37 99 235 / 80%) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 1.75rem !important;
+  }
+}
+
+.socialDescription {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.socialGrid {
+  margin-top: 2rem;
+}
+
+.socialCard {
+  background: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(203 213 225 / 20%);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+
+  @include mantine.hover {
+    background: rgb(255 255 255 / 95%);
+    border-color: rgb(37 99 235 / 30%);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgb(37 99 235 / 15%);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    @include mantine.hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+[data-mantine-color-scheme='dark'] .socialCard {
+  background: rgb(51 65 85 / 80%);
+  border: 1px solid rgb(71 85 105 / 20%);
+
+  @include mantine.hover {
+    background: rgb(51 65 85 / 95%);
+    border-color: rgb(37 99 235 / 40%);
+    box-shadow: 0 12px 40px rgb(37 99 235 / 20%);
+  }
+}
+
+.socialCardContent {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.socialCardHeader {
+  align-items: center;
+}
+
+.socialPlatform {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.socialCardDescription {
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.socialCardFooter {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(203 213 225 / 10%);
+}
+
+[data-mantine-color-scheme='dark'] .socialCardFooter {
+  border-top-color: rgb(71 85 105 / 20%);
+}
+
+.externalIcon {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover .externalIcon {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.heroSection {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.heroIcon {
+  animation: fade-in-scale 1s ease-out 0.2s both;
+}
+
+.heroContent {
+  animation: fade-in-up 0.8s ease-out 0.3s both;
+}
+
+.contentSection {
+  animation: fade-in-up 0.8s ease-out 0.4s both;
+}
+
+.primaryContactCard {
+  animation: fade-in-up 0.8s ease-out 0.5s both;
+}
+
+.socialSection {
+  animation: fade-in-up 0.8s ease-out 0.6s both;
+}
+
+.socialCard {
+  animation: fade-in-scale 0.6s ease-out both;
+
+  &:nth-child(1) {
+    animation-delay: 0.7s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+}
+
+/* Responsive adjustments */
+@include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+  .contactPage {
+    padding: 1rem 0;
+  }
+}

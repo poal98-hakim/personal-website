@@ -1,0 +1,220 @@
+.techScroller {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: calc(var(--mantine-spacing-xl) + var(--mantine-spacing-lg)) 0;
+  background: linear-gradient(
+    135deg,
+    rgb(37 99 235 / 2%) 0%,
+    rgb(37 99 235 / 5%) 50%,
+    rgb(37 99 235 / 2%) 100%
+  );
+  border-top: 1px solid rgb(37 99 235 / 10%);
+  border-bottom: 1px solid rgb(37 99 235 / 10%);
+  overflow: hidden;
+}
+
+.techScroller {
+  @include mantine.dark {
+    background: linear-gradient(
+      135deg,
+      rgb(37 99 235 / 5%) 0%,
+      rgb(37 99 235 / 10%) 50%,
+      rgb(37 99 235 / 5%) 100%
+    );
+    border-top: 1px solid rgb(37 99 235 / 20%);
+    border-bottom: 1px solid rgb(37 99 235 / 20%);
+  }
+}
+
+.scrollContainer {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgb(255 255 255 / 100%) 0%,
+      rgb(255 255 255 / 0%) 100%
+    );
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgb(255 255 255 / 100%) 0%,
+      rgb(255 255 255 / 0%) 100%
+    );
+  }
+}
+
+.scrollContainer {
+  @include mantine.dark {
+    &::before {
+      background: linear-gradient(
+        to right,
+        rgb(15 23 42 / 100%) 0%,
+        rgb(15 23 42 / 0%) 100%
+      );
+    }
+
+    &::after {
+      background: linear-gradient(
+        to left,
+        rgb(15 23 42 / 100%) 0%,
+        rgb(15 23 42 / 0%) 100%
+      );
+    }
+  }
+}
+
+.scrollContent {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mantine-spacing-xl);
+  animation: scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mantine-spacing-sm);
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-lg);
+  background: rgb(255 255 255 / 80%);
+  border: 1px solid rgb(203 213 225 / 30%);
+  border-radius: var(--mantine-radius-md);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 120px;
+  white-space: nowrap;
+
+  @include mantine.hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgb(37 99 235 / 15%);
+    background: rgb(255 255 255 / 95%);
+    border-color: rgb(37 99 235 / 20%);
+
+    .techIcon {
+      transform: scale(1.1);
+      
+      svg {
+        color: var(--icon-color);
+        filter: drop-shadow(0 0 8px rgb(37 99 235 / 30%));
+      }
+    }
+
+    .techName {
+      color: var(--icon-color);
+      font-weight: 600;
+    }
+  }
+}
+
+.techItem {
+  @include mantine.dark {
+    background: rgb(51 65 85 / 80%);
+    border: 1px solid rgb(71 85 105 / 30%);
+
+    @include mantine.hover {
+      background: rgb(51 65 85 / 95%);
+      border-color: rgb(37 99 235 / 40%);
+      box-shadow: 0 8px 25px rgb(37 99 235 / 25%);
+    }
+  }
+}
+
+.techIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  
+  svg {
+    font-size: 48px;
+    color: var(--mantine-color-text-dimmed);
+    transition: all 0.3s ease;
+  }
+}
+
+.techName {
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+  color: var(--mantine-color-text);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover for better UX */
+.scrollContainer:hover .scrollContent {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+  .techScroller {
+    padding: var(--mantine-spacing-xl) 0;
+  }
+
+  .techItem {
+    min-width: 100px;
+    padding: var(--mantine-spacing-sm) var(--mantine-spacing-md);
+  }
+
+  .techIcon svg {
+    font-size: 36px;
+  }
+
+  .techName {
+    font-size: var(--mantine-font-size-xs);
+  }
+
+  .scrollContent {
+    gap: var(--mantine-spacing-lg);
+    animation-duration: 45s; /* Faster on mobile */
+  }
+}
+
+@include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+  .techItem {
+    min-width: 80px;
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  }
+
+  .techIcon svg {
+    font-size: 32px;
+  }
+
+  .scrollContent {
+    gap: var(--mantine-spacing-md);
+    animation-duration: 35s; /* Even faster on small screens */
+  }
+}

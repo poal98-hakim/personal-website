@@ -1,0 +1,135 @@
+{
+  "frontend": [
+    {
+      "name": "React",
+      "icon": "react",
+      "color": "#61DAFB"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "typescript",
+      "color": "#3178C6"
+    },
+    {
+      "name": "Next.js",
+      "icon": "nextjs",
+      "color": "#000000"
+    },
+    {
+      "name": "React Native",
+      "icon": "react",
+      "color": "#61DAFB"
+    },
+    {
+      "name": "Expo",
+      "icon": "expo",
+      "color": "#000020"
+    },
+    {
+      "name": "Redux",
+      "icon": "redux",
+      "color": "#764ABC"
+    },
+    {
+      "name": "D3.js",
+      "icon": "d3js",
+      "color": "#F68E56"
+    },
+    {
+      "name": "HTML",
+      "icon": "html5",
+      "color": "#E34F26"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "javascript",
+      "color": "#F7DF1E"
+    }
+  ],
+  "styling": [
+    {
+      "name": "SCSS",
+      "icon": "sass",
+      "color": "#CF649A"
+    },
+    {
+      "name": "Styled Components",
+      "icon": "styled-components",
+      "color": "#DB7093"
+    },
+    {
+      "name": "Mantine",
+      "icon": "mantine",
+      "color": "#339AF0"
+    },
+    {
+      "name": "CSS",
+      "icon": "css3",
+      "color": "#1572B6"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Jest",
+      "icon": "jest",
+      "color": "#C21325"
+    },
+    {
+      "name": "Playwright",
+      "icon": "playwright",
+      "color": "#2EAD33"
+    },
+    {
+      "name": "Storybook",
+      "icon": "storybook",
+      "color": "#FF4785"
+    },
+    {
+      "name": "Git",
+      "icon": "git",
+      "color": "#F05032"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "color": "#181717"
+    },
+    {
+      "name": "GitLab",
+      "icon": "gitlab",
+      "color": "#FC6D26"
+    }
+  ],
+  "backend": [
+    {
+      "name": "Node.js",
+      "icon": "nodejs",
+      "color": "#339933"
+    },
+    {
+      "name": "Python",
+      "icon": "python",
+      "color": "#3776AB"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "mongodb",
+      "color": "#47A248"
+    },
+    {
+      "name": "SQL",
+      "icon": "sql",
+      "color": "#4479A1"
+    },
+    {
+      "name": "Express.js",
+      "icon": "express",
+      "color": "#000000"
+    },
+    {
+      "name": "REST APIs",
+      "icon": "api",
+      "color": "#0066CC"
+    }
+  ]
+}

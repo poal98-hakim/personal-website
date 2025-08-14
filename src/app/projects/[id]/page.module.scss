@@ -1,0 +1,293 @@
+.projectDetailPage {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 1rem 0;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: 0.5rem 0;
+  }
+}
+
+.backButton {
+  background: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(203 213 225 / 20%);
+  transition: all 0.3s ease;
+
+  @include mantine.hover {
+    background: rgb(255 255 255 / 95%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 15%);
+  }
+}
+
+[data-mantine-color-scheme='dark'] .backButton {
+  background: rgb(51 65 85 / 80%);
+  border: 1px solid rgb(71 85 105 / 30%);
+
+  @include mantine.hover {
+    background: rgb(51 65 85 / 95%);
+    border-color: rgb(37 99 235 / 40%);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 20%);
+  }
+}
+
+.hero {
+  padding: 3rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, rgb(37 99 235 / 5%) 0%, rgb(124 58 237 / 5%) 100%);
+  border-radius: 1rem;
+  margin: 2rem 0;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: 2rem 0;
+  }
+}
+
+.title {
+  background: linear-gradient(135deg, var(--mantine-color-text) 0%, rgb(37 99 235 / 80%) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 2.5rem !important;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
+    font-size: 2rem !important;
+  }
+}
+
+.subtitle {
+  font-weight: 500;
+  max-width: 600px;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    font-size: 1.125rem !important;
+  }
+}
+
+.metadata {
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem !important;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-lg) {
+    order: -1;
+
+    .sidebarCard {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.section {
+  background: linear-gradient(135deg, rgb(255 255 255 / 90%) 0%, rgb(248 250 252 / 90%) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(203 213 225 / 20%);
+  padding: 2rem;
+  transition: all 0.3s ease;
+
+  @include mantine.hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 10%);
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+    padding: 1.5rem;
+  }
+}
+
+[data-mantine-color-scheme='dark'] .section {
+  background: linear-gradient(135deg, rgb(51 65 85 / 90%) 0%, rgb(30 41 59 / 90%) 100%);
+  border: 1px solid rgb(71 85 105 / 20%);
+
+  @include mantine.hover {
+    box-shadow: 0 8px 32px rgb(37 99 235 / 15%);
+  }
+}
+
+.sidebarCard {
+  background: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(203 213 225 / 20%);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+
+  @include mantine.hover {
+    background: rgb(255 255 255 / 95%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 10%);
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-lg) {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+[data-mantine-color-scheme='dark'] .sidebarCard {
+  background: rgb(51 65 85 / 80%);
+  border: 1px solid rgb(71 85 105 / 20%);
+
+  @include mantine.hover {
+    background: rgb(51 65 85 / 95%);
+    border-color: rgb(37 99 235 / 30%);
+    box-shadow: 0 8px 32px rgb(37 99 235 / 15%);
+  }
+}
+
+.sectionTitle {
+  color: var(--mantine-color-text);
+  position: relative;
+  margin-bottom: 1rem !important;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--mantine-color-blue-6), var(--mantine-color-blue-4));
+    border-radius: 2px;
+  }
+}
+
+.paragraph {
+  line-height: 1.7;
+  color: var(--mantine-color-text);
+}
+
+.bulletPoint {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--mantine-color-blue-6), var(--mantine-color-blue-5));
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* Achievement list styling */
+.section {
+  .mantine-Group-root {
+    align-items: flex-start !important;
+
+    .mantine-Text-root {
+      flex: 1;
+      line-height: 1.6;
+      overflow-wrap: break-word;
+      hyphens: auto;
+
+      @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
+        line-height: 1.5;
+        font-size: 0.875rem !important;
+      }
+    }
+  }
+}
+
+.externalLink {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: rgb(37 99 235 / 5%);
+  border: 1px solid rgb(37 99 235 / 10%);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+
+  @include mantine.hover {
+    background: rgb(37 99 235 / 10%);
+    border-color: rgb(37 99 235 / 20%);
+    transform: translateX(4px);
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+[data-mantine-color-scheme='dark'] .externalLink {
+  background: rgb(37 99 235 / 10%);
+  border: 1px solid rgb(37 99 235 / 20%);
+
+  @include mantine.hover {
+    background: rgb(37 99 235 / 15%);
+    border-color: rgb(37 99 235 / 30%);
+  }
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectDetailPage {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.hero {
+  animation: fade-in-up 0.8s ease-out 0.1s both;
+}
+
+.section {
+  animation: fade-in-up 0.6s ease-out both;
+
+  &:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+}
+
+.sidebarCard {
+  animation: fade-in-up 0.6s ease-out both;
+
+  &:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+}
