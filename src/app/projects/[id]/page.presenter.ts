@@ -3,6 +3,24 @@ import type { ProjectPM } from '@/repositories/projects';
 import { ProjectDetailViewModel } from './page.model';
 
 export class ProjectDetailPresenter {
+  // Get all project IDs for static generation
+  public getAllProjectIds(): string[] {
+    const professionalResult = projectsRepository.getProfessionalProjects();
+    const personalResult = projectsRepository.getPersonalProjects();
+
+    const allProjects = [];
+
+    if (professionalResult.ok) {
+      allProjects.push(...professionalResult.data);
+    }
+
+    if (personalResult.ok) {
+      allProjects.push(...personalResult.data);
+    }
+
+    return allProjects.map((project) => project.id);
+  }
+
   // Map project PM to view model
   private mapPMToVM(project: ProjectPM): ProjectDetailViewModel {
     return {

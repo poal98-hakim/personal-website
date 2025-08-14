@@ -23,6 +23,15 @@ import React from 'react';
 import styles from './page.module.scss';
 import { ProjectDetailPresenter } from './page.presenter';
 
+export async function generateStaticParams() {
+  const presenter = new ProjectDetailPresenter();
+  const projectIds = presenter.getAllProjectIds();
+
+  return projectIds.map((id) => ({
+    id,
+  }));
+}
+
 export default function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const presenter = new ProjectDetailPresenter();
   const resolvedParams = React.use(params);
