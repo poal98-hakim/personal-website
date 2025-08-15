@@ -1,5 +1,4 @@
 .homePage {
-  padding: var(--mantine-spacing-xl) 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,6 +35,8 @@
 }
 
 .heroTitle {
+  margin-bottom: var(--mantine-spacing-md) !important;
+
   @supports (background-clip: text) or (-webkit-background-clip: text) {
     background: linear-gradient(
       135deg,
@@ -43,11 +44,8 @@
       rgb(37 99 235 / 80%) 100%
     );
     background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  margin-bottom: var(--mantine-spacing-md) !important;
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
     font-size: 3rem !important;
@@ -123,6 +121,7 @@
   background: rgb(37 99 235);
   color: white;
   border: 1px solid rgb(37 99 235);
+  transition: all 0.3s ease;
 
   @supports (backdrop-filter: blur(10px)) {
     background: rgb(255 255 255 / 80%);
@@ -130,8 +129,6 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgb(37 99 235 / 20%);
   }
-
-  transition: all 0.3s ease;
 
   @include mantine.hover {
     background: rgb(29 78 216);
@@ -226,7 +223,6 @@
       var(--mantine-color-text, #000) 0%,
       rgb(37 99 235 / 80%) 100%
     );
-    background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }

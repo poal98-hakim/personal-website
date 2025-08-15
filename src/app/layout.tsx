@@ -20,6 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hakimabdelcadir.vercel.app'),
   title: 'Hakim Abdelcadir - Senior Frontend Engineer',
   description:
     'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
@@ -36,20 +37,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
+    url: 'https://hakimabdelcadir.vercel.app',
     title: 'Hakim Abdelcadir - Senior Frontend Engineer',
     description:
       'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
     siteName: 'Hakim Abdelcadir Portfolio',
+    images: [
+      {
+        url: '/profile-photo.png',
+        width: 800,
+        height: 600,
+        alt: 'Hakim Abdelcadir - Senior Frontend Engineer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@hakim98bologna',
     title: 'Hakim Abdelcadir - Senior Frontend Engineer',
     description:
       'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
-  },
-  robots: {
-    index: true,
-    follow: true,
+    images: ['/profile-photo.png'],
   },
 };
 

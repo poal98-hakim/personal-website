@@ -1,3 +1,4 @@
+import { formatDate } from '@/utils/date';
 import { Badge, Card, Group, Stack, Text } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
 import Link from 'next/link';
@@ -56,7 +57,7 @@ export function ProjectCard(props: ProjectCardProps) {
           <Group justify="space-between" align="center">
             {project.lastUpdated && (
               <Text size="xs" c="dimmed">
-                Updated {new Date(project.lastUpdated).toLocaleDateString()}
+                Updated {formatDate(project.lastUpdated)}
               </Text>
             )}
             <Text size="xs" c="blue" fw={500}>

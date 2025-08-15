@@ -1,6 +1,6 @@
 import { render, screen } from '@/test-utils';
 import { SocialLinks } from './SocialLinks';
-import type { SocialLinkVM } from '../../page.model';
+import type { SocialLink } from '../../page.model';
 
 // Mock the icon mapping
 jest.mock('@tabler/icons-react', () => ({
@@ -10,7 +10,7 @@ jest.mock('@tabler/icons-react', () => ({
 }));
 
 describe('SocialLinks', () => {
-  const mockSocialLinks: SocialLinkVM[] = [
+  const mockSocialLinks: SocialLink[] = [
     {
       name: 'GitHub',
       description: 'My code repositories',
@@ -69,7 +69,7 @@ describe('SocialLinks', () => {
   });
 
   test('handles unknown icon names gracefully', () => {
-    const linksWithUnknownIcon: SocialLinkVM[] = [
+    const linksWithUnknownIcon: SocialLink[] = [
       {
         name: 'Unknown Platform',
         description: 'Some platform',
@@ -85,7 +85,7 @@ describe('SocialLinks', () => {
   });
 
   test('renders single social link correctly', () => {
-    const singleLink: SocialLinkVM[] = [
+    const singleLink: SocialLink[] = [
       {
         name: 'GitHub',
         description: 'Code repositories',

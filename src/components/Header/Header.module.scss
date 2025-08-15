@@ -1,10 +1,11 @@
 .root {
-  background: var(--mantine-color-background);
+  background: var(--mantine-color-body);
   border-bottom: 1px solid var(--mantine-color-border);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: var(--mantine-z-index-app);
-  backdrop-filter: blur(8px);
 }
 
 .nav {
@@ -59,7 +60,7 @@
     color: var(--mantine-color-text);
     background-color: var(--mantine-color-gray-0);
   }
-  
+
   @include mantine.dark {
     @include mantine.hover {
       background-color: var(--mantine-color-dark-6);
@@ -80,10 +81,10 @@
     color: var(--mantine-color-blue-7);
     background-color: var(--mantine-color-blue-1);
   }
-  
+
   @include mantine.dark {
     background-color: var(--mantine-color-dark-6);
-    
+
     @include mantine.hover {
       background-color: var(--mantine-color-dark-5);
     }

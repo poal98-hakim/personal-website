@@ -11,17 +11,17 @@ export class HeaderPresenter {
       {
         label: 'Projects',
         href: '/projects',
-        isActive: pathname === '/projects',
+        isActive: pathname.startsWith('/projects'),
       },
       {
         label: 'About',
         href: '/about',
-        isActive: pathname === '/about',
+        isActive: pathname.startsWith('/about'),
       },
       {
         label: 'Contact',
         href: '/contact',
-        isActive: pathname === '/contact',
+        isActive: pathname.startsWith('/contact'),
       },
     ];
   }

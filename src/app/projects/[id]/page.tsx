@@ -1,3 +1,4 @@
+import { formatDate } from '@/utils/date';
 import {
   Anchor,
   Badge,
@@ -19,7 +20,6 @@ import {
 } from '@tabler/icons-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import React from 'react';
 import styles from './page.module.scss';
 import { ProjectDetailPresenter } from './page.presenter';
 
@@ -76,7 +76,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 )}
                 {viewModel.lastUpdated && (
                   <Text size="sm" c="dimmed">
-                    Last updated: {new Date(viewModel.lastUpdated).toLocaleDateString()}
+                    Last updated: {formatDate(viewModel.lastUpdated)}
                   </Text>
                 )}
               </Group>

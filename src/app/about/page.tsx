@@ -9,7 +9,7 @@ export default function AboutPage() {
   const viewModel = presenter.getViewModel();
   const { personalInfo, technologies, socialLinks, experience } = viewModel;
   return (
-    <Box className={styles.aboutPage}>
+    <Box>
       <Container size="lg">
         <Box component="section" className={styles.heroSection}>
           <Stack gap="xl">
