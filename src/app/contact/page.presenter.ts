@@ -7,7 +7,7 @@ export class ContactPresenter {
       title: "Let's Connect",
       subtitle: 'Ready to collaborate and build something amazing together',
       description:
-        "Whether you have a project idea, want to discuss opportunities, or just want to chat about the latest in web development - I'd love to hear from you",
+        "Whether you have a project idea, want to discuss opportunities, or just want to chat about the latest in web development, I'd love to hear from you",
     };
   }
 
