@@ -13,6 +13,7 @@ export interface UserDTO {
   bio: string;
   location: string;
   email: string;
+  githubUsername: string;
   socialLinks: SocialLinkDTO[];
 }
 

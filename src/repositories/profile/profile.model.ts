@@ -15,6 +15,7 @@ export interface ProfilePM {
   bio: string;
   location: string;
   email: string;
+  githubUsername: string;
   socialLinks: SocialLinkPM[];
 }
 
@@ -42,5 +43,6 @@ export const UserDTOSchema = z.object({
     .nullable()
     .transform((val) => val ?? ''),
   email: z.string(),
+  githubUsername: z.string(),
   socialLinks: z.array(SocialLinkDTOSchema),
 });

@@ -53,7 +53,12 @@ export function ProjectCard(props: ProjectCardProps) {
 
         {/* Footer */}
         <footer className={styles.footer}>
-          <Group justify="flex-end" align="center">
+          <Group justify="space-between" align="center">
+            {project.lastUpdated && (
+              <Text size="xs" c="dimmed">
+                Updated {new Date(project.lastUpdated).toLocaleDateString()}
+              </Text>
+            )}
             <Text size="xs" c="blue" fw={500}>
               View Details
             </Text>

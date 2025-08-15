@@ -7,6 +7,7 @@ export interface ProjectDetailViewModel {
   role?: string;
   tags: string[];
   achievements?: string[];
+  lastUpdated?: string;
   externalLinks?: {
     type: 'linkedin' | 'website';
     label: string;

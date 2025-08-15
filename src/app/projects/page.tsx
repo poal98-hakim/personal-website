@@ -21,9 +21,12 @@ import {
 import styles from './page.module.scss';
 import { ProjectsPresenter } from './page.presenter';
 
-export default function ProjectsPage() {
+// Revalidate every day to keep GitHub projects up-to-date
+export const revalidate = 86400;
+
+export default async function ProjectsPage() {
   const presenter = new ProjectsPresenter();
-  const viewModel = presenter.getViewModel();
+  const viewModel = await presenter.getViewModel();
   const { professional, personal } = viewModel;
 
   return (

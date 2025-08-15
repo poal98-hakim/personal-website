@@ -23,9 +23,12 @@ import Link from 'next/link';
 import styles from './page.module.scss';
 import { HomePagePresenter, HomePageVM } from './page.presenter';
 
-export default function Home() {
+// Revalidate every day to keep GitHub project counts up-to-date
+export const revalidate = 86400;
+
+export default async function Home() {
   const presenter = new HomePagePresenter();
-  const data: HomePageVM = presenter.getHomePageVM();
+  const data: HomePageVM = await presenter.getHomePageVM();
 
   if (data.error) {
     return (

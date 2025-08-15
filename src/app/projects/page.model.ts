@@ -3,6 +3,7 @@ export interface ProjectCardData {
   title: string;
   description: string;
   tags: string[];
+  lastUpdated?: string;
 }
 
 export interface ProjectSection {

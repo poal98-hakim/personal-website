@@ -23,19 +23,22 @@ import React from 'react';
 import styles from './page.module.scss';
 import { ProjectDetailPresenter } from './page.presenter';
 
+// Revalidate every day to keep GitHub projects up-to-date
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   const presenter = new ProjectDetailPresenter();
-  const projectIds = presenter.getAllProjectIds();
+  const projectIds = await presenter.getAllProjectIds();
 
   return projectIds.map((id) => ({
     id,
   }));
 }
 
-export default function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const presenter = new ProjectDetailPresenter();
-  const resolvedParams = React.use(params);
-  const viewModel = presenter.getViewModel(resolvedParams.id);
+  const resolvedParams = await params;
+  const viewModel = await presenter.getViewModel(resolvedParams.id);
 
   if (viewModel.error) {
     notFound();
@@ -70,6 +73,11 @@ export default function ProjectDetailPage({ params }: { params: Promise<{ id: st
                   <Badge size="lg" variant="light" color="blue">
                     {viewModel.role}
                   </Badge>
+                )}
+                {viewModel.lastUpdated && (
+                  <Text size="sm" c="dimmed">
+                    Last updated: {new Date(viewModel.lastUpdated).toLocaleDateString()}
+                  </Text>
                 )}
               </Group>
             </Stack>

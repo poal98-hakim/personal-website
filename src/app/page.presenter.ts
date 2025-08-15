@@ -24,11 +24,11 @@ export interface HomePageVM {
 }
 
 export class HomePagePresenter {
-  getHomePageVM(): HomePageVM {
+  async getHomePageVM(): Promise<HomePageVM> {
     const profileResult = profileRepository.getProfile();
     const technologiesResult = profileRepository.getTechnologies();
     const professionalProjectsResult = projectsRepository.getProfessionalProjects();
-    const personalProjectsResult = projectsRepository.getPersonalProjects();
+    const personalProjectsResult = await projectsRepository.getPersonalProjects();
     const yearsOfExperience = calculateYearsOfExperience(2017);
 
     if (!profileResult.ok) {

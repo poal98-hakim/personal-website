@@ -33,19 +33,19 @@ describe('AnimatedCounter', () => {
     jest.useRealTimers();
   });
 
-  test('renders with initial count of 0', () => {
+  test('renders with initial target value for JavaScript-disabled compatibility', () => {
     render(<AnimatedCounter target={100} startOnVisible={false} />);
-    expect(screen.getByText('0')).toBeInTheDocument();
+    expect(screen.getByText('100')).toBeInTheDocument();
   });
 
-  test('renders with custom start value', () => {
+  test('renders with target value regardless of start value for JavaScript-disabled compatibility', () => {
     render(<AnimatedCounter target={100} start={5} startOnVisible={false} />);
-    expect(screen.getByText('5')).toBeInTheDocument();
+    expect(screen.getByText('100')).toBeInTheDocument();
   });
 
   test('renders with suffix when provided', () => {
     render(<AnimatedCounter target={5} suffix="+" startOnVisible={false} />);
-    expect(screen.getByText('0+')).toBeInTheDocument();
+    expect(screen.getByText('5+')).toBeInTheDocument();
   });
 
   test('applies custom className when provided', () => {
@@ -60,7 +60,7 @@ describe('AnimatedCounter', () => {
     render(<AnimatedCounter target={100} startOnVisible={false} />);
 
     // Component renders immediately without intersection observer
-    expect(screen.getByText('0')).toBeInTheDocument();
+    expect(screen.getByText('100')).toBeInTheDocument();
     expect(mockIntersectionObserver).not.toHaveBeenCalled();
   });
 
@@ -78,7 +78,7 @@ describe('AnimatedCounter', () => {
 
     unmount();
     // Component unmounts successfully
-    expect(screen.queryByText('0')).not.toBeInTheDocument();
+    expect(screen.queryByText('100')).not.toBeInTheDocument();
   });
 
   test('cleans up intersection observer on unmount', () => {

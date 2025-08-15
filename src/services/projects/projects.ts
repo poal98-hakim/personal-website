@@ -1,20 +1,31 @@
 import projectsData from '@/data/projects.json';
 import { httpGateway } from '@/utils/httpGateway';
 import { Result, err, ok } from '@/utils/result';
-import type { ProjectDTO } from './projects.model';
+import type { GithubRepoDTO, ProjectDTO } from './projects.model';
 
 class ProjectsService {
   private readonly githubApiBase = 'https://api.github.com';
 
-  // Personal projects
-  async getGithubPersonalProjects(username: string): Promise<Result<ProjectDTO[]>> {
+  // Personal projects from GitHub
+  async getGithubPersonalProjects(username: string): Promise<Result<GithubRepoDTO[]>> {
     try {
-      const githubProjects = await httpGateway.get<ProjectDTO[]>(
-        `${this.githubApiBase}/users/${username}/repos?sort=updated&per_page=10`
+      // Add GitHub token for authentication if available
+      const headers: Record<string, string> = {
+        Accept: 'application/vnd.github+json',
+      };
+
+      const githubToken = process.env.GITHUB_TOKEN;
+      if (githubToken) {
+        headers['Authorization'] = `Bearer ${githubToken}`;
+      }
+
+      const githubRepos = await httpGateway.get<GithubRepoDTO[]>(
+        `${this.githubApiBase}/users/${username}/repos?type=public&sort=updated&per_page=20`,
+        { headers }
       );
-      return ok(githubProjects);
+      return ok(githubRepos);
     } catch (error) {
-      return err('Network', 'Failed to load personal projects from GitHub and static data', error);
+      return err('Network', 'Failed to load personal projects from GitHub', error);
     }
   }
 

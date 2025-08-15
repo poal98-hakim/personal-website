@@ -9,6 +9,7 @@ export interface ProjectPM {
   role?: string;
   tags: string[];
   achievements?: string[];
+  lastUpdated?: string;
   externalLinks?: {
     type: 'linkedin' | 'website';
     label: string;
@@ -25,6 +26,7 @@ export const ProjectDTOSchema = z.object({
   role: z.string().optional(),
   tags: z.array(z.string()),
   achievements: z.array(z.string()).optional(),
+  lastUpdated: z.string().optional(),
   externalLinks: z
     .array(
       z.object({

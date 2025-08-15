@@ -4,9 +4,10 @@ import { ProjectDetailViewModel } from './page.model';
 
 export class ProjectDetailPresenter {
   // Get all project IDs for static generation
-  public getAllProjectIds(): string[] {
+  // Include both professional and GitHub personal projects
+  public async getAllProjectIds(): Promise<string[]> {
     const professionalResult = projectsRepository.getProfessionalProjects();
-    const personalResult = projectsRepository.getPersonalProjects();
+    const personalResult = await projectsRepository.getPersonalProjects();
 
     const allProjects = [];
 
@@ -37,15 +38,16 @@ export class ProjectDetailPresenter {
       role: project.role,
       tags: project.tags,
       achievements: project.achievements,
+      lastUpdated: project.lastUpdated,
       externalLinks: project.externalLinks,
       loading: false,
       error: null,
     };
   }
 
-  public getViewModel(id: string): ProjectDetailViewModel {
+  public async getViewModel(id: string): Promise<ProjectDetailViewModel> {
     // Get data from repository
-    const result = projectsRepository.getProjectById(id);
+    const result = await projectsRepository.getProjectById(id);
 
     // Handle errors
     if (!result.ok) {
@@ -58,6 +60,7 @@ export class ProjectDetailPresenter {
         role: undefined,
         tags: [],
         achievements: undefined,
+        lastUpdated: undefined,
         externalLinks: undefined,
         loading: false,
         error: result.error.message,

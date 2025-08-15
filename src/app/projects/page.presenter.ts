@@ -4,13 +4,14 @@ import type { ProjectCardData, ProjectsViewModel } from './page.model';
 import { truncateDescription } from './page.utils';
 
 export class ProjectsPresenter {
-  // Map project PM to card data
-  private mapPMToCardData(project: ProjectPM): ProjectCardData {
+  // Map project PM to card vm
+  private mapPMToCardVM(project: ProjectPM): ProjectCardData {
     return {
       id: project.id,
       title: project.title,
       description: truncateDescription(project.shortDescription),
       tags: project.tags.slice(0, 5), // Limit tags to avoid overcrowding
+      lastUpdated: project.lastUpdated,
     };
   }
 
@@ -20,9 +21,9 @@ export class ProjectsPresenter {
   ): ProjectsViewModel {
     // Map projects to card data
     const mappedProfessionalProjects = professionalProjects.map((project) =>
-      this.mapPMToCardData(project)
+      this.mapPMToCardVM(project)
     );
-    const mappedPersonalProjects = personalProjects.map((project) => this.mapPMToCardData(project));
+    const mappedPersonalProjects = personalProjects.map((project) => this.mapPMToCardVM(project));
 
     return {
       professional: {
@@ -40,10 +41,10 @@ export class ProjectsPresenter {
     };
   }
 
-  public getViewModel(): ProjectsViewModel {
+  public async getViewModel(): Promise<ProjectsViewModel> {
     // Get data from repositories
     const professionalResult = projectsRepository.getProfessionalProjects();
-    const personalResult = projectsRepository.getPersonalProjects();
+    const personalResult = await projectsRepository.getPersonalProjects();
 
     // Handle errors for professional projects
     if (!professionalResult.ok) {
@@ -67,7 +68,7 @@ export class ProjectsPresenter {
     if (!personalResult.ok) {
       return {
         professional: {
-          projects: professionalResult.data.map((project) => this.mapPMToCardData(project)),
+          projects: professionalResult.data.map((project) => this.mapPMToCardVM(project)),
           loading: false,
           error: null,
           count: professionalResult.data.length,

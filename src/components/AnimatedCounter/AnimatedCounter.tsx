@@ -22,7 +22,8 @@ export function AnimatedCounter({
   suffix = '',
   className,
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(start);
+  // Start with target value as fallback for when JS is disabled
+  const [count, setCount] = useState(target);
   const counterRef = useRef<HTMLElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const hasAnimated = useRef(false);

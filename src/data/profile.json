@@ -1,8 +1,9 @@
 {
   "name": "Hakim Abdelcadir",
-  "bio": "Senior Frontend Engineer at Aveni. Passionate about React, TypeScript, and building user-centric AI-powered web applications.",
+  "bio": "Senior Frontend Engineer. Passionate about React, TypeScript, and building user-centric AI-powered web applications.",
   "location": "London, UK",
   "email": "hakim98bologna@yahoo.it",
+  "githubUsername": "poal98-hakim",
   "socialLinks": [
     {
       "name": "GitHub",

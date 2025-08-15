@@ -7,6 +7,7 @@ export function mapUserDTOtoPM(dto: UserDTO): ProfilePM {
     bio: dto.bio || '',
     location: dto.location || '',
     email: dto.email || '',
+    githubUsername: dto.githubUsername,
     socialLinks: dto.socialLinks.map((link) => ({
       name: link.name,
       platform: link.platform,
