@@ -80,11 +80,9 @@ export function AnimatedCounter({
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           // Add a small delay to ensure the element is fully visible
-          setTimeout(() => {
-            if (entry.isIntersecting) {
-              animateCount();
-            }
-          }, 400);
+          if (entry.isIntersecting) {
+            animateCount();
+          }
         }
       },
       { threshold: 0.5, rootMargin: '0px' }
