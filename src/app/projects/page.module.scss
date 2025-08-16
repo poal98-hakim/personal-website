@@ -11,7 +11,7 @@
   }
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
-    padding: 2rem 0;
+    padding: var(--mantine-spacing-xl) 0;
   }
 }
 
@@ -103,10 +103,10 @@
 }
 
 .sectionHeader {
-  padding: 2rem 0;
+  padding: var(--mantine-spacing-xl) 0;
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
-    padding: 1.5rem 0;
+    padding: var(--mantine-spacing-lg) 0;
   }
 }
 
@@ -165,7 +165,7 @@
   background: rgb(255 255 255 / 90%);
   backdrop-filter: blur(10px);
   border: 1px solid rgb(239 68 68 / 20%);
-  margin: 2rem 0;
+  margin: var(--mantine-spacing-xl) 0;
 }
 
 [data-mantine-color-scheme='dark'] .errorAlert {
@@ -179,7 +179,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgb(203 213 225 / 20%);
   border-radius: 1rem;
-  margin: 2rem 0;
+  margin: var(--mantine-spacing-xl) 0;
   text-align: center;
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
@@ -263,6 +263,6 @@
   }
 
   .projectsPage {
-    padding: 1rem 0;
+    padding: var(--mantine-spacing-md) 0;
   }
 }

@@ -16,10 +16,10 @@
 }
 
 .heroIcon {
-  margin-bottom: 1rem;
+  margin-bottom: var(--mantine-spacing-md);
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--mantine-spacing-xs);
   }
 }
 
@@ -99,7 +99,7 @@
 }
 
 .contentSection {
-  margin-top: 2rem;
+  margin-top: var(--mantine-spacing-xl);
 }
 
 .primaryContactCard {
@@ -115,11 +115,11 @@
   }
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
-    padding: 2rem;
+    padding: var(--mantine-spacing-xl);
   }
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-xs) {
-    padding: 1.5rem;
+    padding: var(--mantine-spacing-lg);
   }
 }
 
@@ -136,7 +136,7 @@
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem !important;
+    gap: var(--mantine-spacing-lg) !important;
   }
 }
 
@@ -207,7 +207,7 @@
 }
 
 .socialHeader {
-  margin-bottom: 2rem;
+  margin-bottom: var(--mantine-spacing-xl);
 }
 
 .socialTitle {
@@ -232,7 +232,7 @@
 }
 
 .socialGrid {
-  margin-top: 2rem;
+  margin-top: var(--mantine-spacing-xl);
 }
 
 .socialCard {
@@ -291,7 +291,7 @@
 
 .socialCardFooter {
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: var(--mantine-spacing-md);
   border-top: 1px solid rgb(203 213 225 / 10%);
 }
 

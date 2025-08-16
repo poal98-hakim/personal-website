@@ -3,10 +3,10 @@
 }
 
 .header {
-  padding: 1rem 0;
+  padding: var(--mantine-spacing-md) 0;
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
-    padding: 0.5rem 0;
+    padding: var(--mantine-spacing-xs) 0;
   }
 }
 
@@ -39,10 +39,10 @@
   text-align: center;
   background: linear-gradient(135deg, rgb(37 99 235 / 5%) 0%, rgb(124 58 237 / 5%) 100%);
   border-radius: 1rem;
-  margin: 2rem 0;
+  margin: var(--mantine-spacing-xl) 0;
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
-    padding: 2rem 0;
+    padding: var(--mantine-spacing-xl) var(--mantine-spacing-md);
   }
 }
 
@@ -79,40 +79,40 @@
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem !important;
+    gap: var(--mantine-spacing-xs) !important;
   }
 }
 
 .content {
   display: grid;
   grid-template-columns: 1fr 320px;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: var(--mantine-spacing-xl);
+  margin-top: var(--mantine-spacing-xl);
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-lg) {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--mantine-spacing-lg);
   }
 }
 
 .mainContent {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--mantine-spacing-xl);
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--mantine-spacing-lg);
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-lg) {
     order: -1;
 
     .sidebarCard {
       display: inline-block;
-      margin-right: 1rem;
-      margin-bottom: 1rem;
+      margin-right: var(--mantine-spacing-md);
+      margin-bottom: var(--mantine-spacing-md);
     }
   }
 }
@@ -121,7 +121,7 @@
   background: linear-gradient(135deg, rgb(255 255 255 / 90%) 0%, rgb(248 250 252 / 90%) 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgb(203 213 225 / 20%);
-  padding: 2rem;
+  padding: var(--mantine-spacing-xl);
   transition: all 0.3s ease;
 
   @include mantine.hover {
@@ -130,7 +130,7 @@
   }
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
-    padding: 1.5rem;
+    padding: var(--mantine-spacing-lg);
   }
 }
 
@@ -147,7 +147,7 @@
   background: rgb(255 255 255 / 80%);
   backdrop-filter: blur(10px);
   border: 1px solid rgb(203 213 225 / 20%);
-  padding: 1.5rem;
+  padding: var(--mantine-spacing-lg);
   transition: all 0.3s ease;
 
   @include mantine.hover {
@@ -158,8 +158,8 @@
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-lg) {
     display: inline-block;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-right: var(--mantine-spacing-md);
+    margin-bottom: var(--mantine-spacing-md);
   }
 }
 
@@ -177,7 +177,7 @@
 .sectionTitle {
   color: var(--mantine-color-text);
   position: relative;
-  margin-bottom: 1rem !important;
+  margin-bottom: var(--mantine-spacing-md) !important;
 
   &::after {
     content: '';
@@ -225,8 +225,8 @@
 }
 
 .externalLink {
-  padding: 0.75rem;
-  border-radius: 0.5rem;
+  padding: var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-md);
   background: rgb(37 99 235 / 5%);
   border: 1px solid rgb(37 99 235 / 10%);
   text-decoration: none;

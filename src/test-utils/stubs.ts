@@ -5,6 +5,7 @@ export const profileStub = {
   bio: 'Senior Frontend Engineer passionate about React and TypeScript',
   location: 'London, UK',
   email: 'john@example.com',
+  githubUsername: 'johndoe',
   socialLinks: [
     {
       name: 'GitHub',
@@ -59,6 +60,25 @@ export const technologiesStub = {
   ],
 };
 
+export const githubReposStub = [
+  {
+    id: 12345,
+    name: 'awesome-react-components',
+    full_name: 'johndoe/awesome-react-components',
+    description: 'A collection of reusable React components with TypeScript support',
+    html_url: 'https://github.com/johndoe/awesome-react-components',
+    stargazers_count: 42,
+    language: 'TypeScript',
+    topics: ['react', 'typescript', 'components', 'ui'],
+    fork: false,
+    archived: false,
+    private: false,
+    created_at: '2023-06-15T10:30:00Z',
+    updated_at: '2024-01-10T14:22:00Z',
+    pushed_at: '2024-01-10T14:22:00Z',
+  },
+];
+
 export const projectsStub = {
   professional: [
     {
@@ -67,7 +87,7 @@ export const projectsStub = {
       subtitle: 'Analytics Platform',
       shortDescription: 'A comprehensive analytics dashboard for enterprise clients',
       longDescription:
-        'Built a scalable analytics platform handling millions of data points daily with real-time updates and advanced filtering capabilities.',
+        'Built a scalable analytics platform handling millions of data points daily with real-time updates and advanced filtering capabilities.\nThe system was designed from the ground up to handle enterprise-scale traffic and provide insights that drive business decisions.',
       role: 'Senior Frontend Developer',
       tags: ['react', 'typescript', 'charts'],
       achievements: [
@@ -94,35 +114,5 @@ export const projectsStub = {
       ],
     },
   ],
-  personal: [
-    {
-      id: 'personal-1',
-      title: 'Weather Forecast App',
-      subtitle: 'Weather Application',
-      shortDescription: 'Beautiful weather app with detailed forecasts',
-      longDescription:
-        'A sleek weather application providing detailed forecasts, weather maps, and location-based alerts with a beautiful user interface.',
-      role: 'Creator',
-      tags: ['javascript', 'css', 'api'],
-      achievements: ['10k+ downloads', 'Featured on Product Hunt', '4.8★ rating'],
-      externalLinks: [
-        { type: 'demo', label: 'Live Demo', url: 'https://weather-app-demo.com' },
-        { type: 'github', label: 'Source Code', url: 'https://github.com/user/weather-app' },
-      ],
-    },
-    {
-      id: 'personal-2',
-      title: 'Task Manager',
-      subtitle: 'Productivity Tool',
-      shortDescription: 'Minimalist task management application',
-      longDescription:
-        'A clean and intuitive task management app with drag-and-drop functionality, due date tracking, and team collaboration features.',
-      role: 'Solo Developer',
-      tags: ['react', 'firebase', 'drag-drop'],
-      achievements: ['500+ active users', 'Open source', 'Zero crashes'],
-      externalLinks: [
-        { type: 'github', label: 'Repository', url: 'https://github.com/user/task-manager' },
-      ],
-    },
-  ],
+  personal: [],
 };

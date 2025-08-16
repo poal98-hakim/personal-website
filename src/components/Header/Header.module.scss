@@ -12,11 +12,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: var(--mantine-spacing-md) 0;
   max-width: 1024px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
 }
 
 .logo {
@@ -34,12 +34,12 @@
 .navList {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: var(--mantine-spacing-lg);
   margin: 0;
   padding: 0;
 
   @include mantine.smaller-than(mantine.$mantine-breakpoint-md) {
-    gap: 1rem;
+    gap: var(--mantine-spacing-md);
   }
 }
 
@@ -51,8 +51,8 @@
   color: var(--mantine-color-text-dimmed);
   text-decoration: none;
   font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
   transition: all 150ms ease-in-out;
   position: relative;
 
@@ -94,7 +94,7 @@
 .headerControls {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--mantine-spacing-xs);
 }
 
 .burgerButton {
@@ -108,7 +108,7 @@
 .navListMobile {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--mantine-spacing-xs);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -149,7 +149,7 @@
 
 .navListMobile .navLink {
   display: block;
-  padding: 1rem;
+  padding: var(--mantine-spacing-md);
   font-size: 1.125rem;
   text-align: left;
   width: 100%;

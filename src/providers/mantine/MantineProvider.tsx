@@ -51,7 +51,6 @@ const theme = createTheme({
     gray,
     dark,
   },
-  primaryColor: 'blue',
   defaultRadius: 'md',
   fontFamily:
     'var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
@@ -107,13 +106,6 @@ const theme = createTheme({
     md: '1rem',
     lg: '1.5rem',
     xl: '2rem',
-  },
-  breakpoints: {
-    xs: '30em', // 480px
-    sm: '48em', // 768px
-    md: '64em', // 1024px
-    lg: '74em', // 1184px
-    xl: '90em', // 1440px
   },
   shadows: {
     xs: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
