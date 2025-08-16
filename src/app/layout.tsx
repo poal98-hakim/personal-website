@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'Hakim Abdelcadir Portfolio',
     images: [
       {
-        url: '/profile-photo.png',
+        url: '/profile-photo.jpg',
         width: 800,
         height: 600,
         alt: 'Hakim Abdelcadir - Senior Frontend Engineer',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Hakim Abdelcadir - Senior Frontend Engineer',
     description:
       'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
-    images: ['/profile-photo.png'],
+    images: ['/profile-photo.jpg'],
   },
 };
 

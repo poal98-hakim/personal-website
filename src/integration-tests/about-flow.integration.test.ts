@@ -19,7 +19,7 @@ describe('About Page Flow - Black Box Integration Tests', () => {
     expect(viewModel.personalInfo.role).toBe('Senior Frontend Engineer');
     expect(viewModel.personalInfo.location).toBe('London, UK');
     expect(viewModel.personalInfo.bio).toHaveLength(4); // Should have 4 bio paragraphs
-    expect(viewModel.personalInfo.avatarSrc).toBe('/profile-photo.png');
+    expect(viewModel.personalInfo.avatarSrc).toBe('/profile-photo.jpg');
 
     // Check experience info
     expect(viewModel.experience.title).toBe('Senior Frontend Engineer');

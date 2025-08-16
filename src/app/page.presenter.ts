@@ -37,7 +37,7 @@ export class HomePagePresenter {
           name: '',
           firstName: '',
           bio: '',
-          avatarUrl: '/profile-photo.png',
+          avatarUrl: '/profile-photo.jpg',
         },
         stats: {
           yearsOfExperience: 0,
@@ -56,7 +56,7 @@ export class HomePagePresenter {
           name: profileResult.data.name,
           firstName: profileResult.data.name.split(' ')[0],
           bio: profileResult.data.bio,
-          avatarUrl: '/profile-photo.png',
+          avatarUrl: '/profile-photo.jpg',
         },
         stats: {
           yearsOfExperience,
@@ -96,7 +96,7 @@ export class HomePagePresenter {
         name: profile.name,
         firstName: profile.name.split(' ')[0],
         bio: profile.bio,
-        avatarUrl: '/profile-photo.png',
+        avatarUrl: '/profile-photo.jpg',
       },
       stats: {
         yearsOfExperience,

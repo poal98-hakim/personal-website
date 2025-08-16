@@ -12,7 +12,7 @@ export class AboutPresenter {
         role: 'Senior Frontend Engineer',
         location: 'London, UK',
         tagline: 'Crafting exceptional digital experiences with modern web technologies',
-        avatarSrc: '/profile-photo.png',
+        avatarSrc: '/profile-photo.jpg',
         bio: [
           "I'm a passionate Senior Frontend Engineer, based in UK. With a deep love for creating exceptional user experiences, I transform complex ideas into beautiful, functional, and accessible web applications.",
           'My journey in web development is driven by curiosity and continuous learning. I specialize in React ecosystems, TypeScript, and modern frontend architectures, always staying at the forefront of emerging technologies and best practices.',

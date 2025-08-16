@@ -41,7 +41,7 @@ describe('Home Page Flow - Black Box Integration Tests', () => {
     expect(viewModel.profile.bio).toBe(
       'Senior Frontend Engineer passionate about React and TypeScript'
     );
-    expect(viewModel.profile.avatarUrl).toBe('/profile-photo.png');
+    expect(viewModel.profile.avatarUrl).toBe('/profile-photo.jpg');
 
     // Check stats
     expect(viewModel.stats.yearsOfExperience).toBe(7);

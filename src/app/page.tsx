@@ -1,16 +1,5 @@
 import { AnimatedCounter } from '@/components';
-import {
-  Anchor,
-  Avatar,
-  Box,
-  Button,
-  Card,
-  Container,
-  Group,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Anchor, Box, Button, Card, Container, Group, Stack, Text, Title } from '@mantine/core';
 import {
   IconArrowRight,
   IconBrandGithub,
@@ -19,6 +8,7 @@ import {
   IconCode,
   IconRocket,
 } from '@tabler/icons-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.scss';
 import { HomePagePresenter, HomePageVM } from './page.presenter';
@@ -47,11 +37,11 @@ export default async function Home() {
       <Container size="lg">
         <Box component="section" className={styles.heroSection}>
           <Stack gap="xl" align="center">
-            <Avatar
+            <Image
               src={data.profile.avatarUrl}
               alt={data.profile.name}
-              size={200}
-              radius="xl"
+              width={200}
+              height={200}
               className={styles.heroAvatar}
             />
 

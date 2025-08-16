@@ -17,6 +17,8 @@
 .avatar {
   border: 4px solid rgb(37 99 235 / 10%);
   transition: all 0.3s ease;
+  object-fit: cover;
+  border-radius: var(--mantine-radius-xl);
 
   @include mantine.hover {
     transform: scale(1.05);

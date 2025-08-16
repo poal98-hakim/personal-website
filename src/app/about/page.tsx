@@ -1,5 +1,6 @@
-import { Avatar, Box, Card, Container, Group, Stack, Text, Title } from '@mantine/core';
+import { Box, Card, Container, Group, Stack, Text, Title } from '@mantine/core';
 import { IconBriefcase, IconMapPin } from '@tabler/icons-react';
+import Image from 'next/image';
 import { SocialLinks, TechScroller } from './components';
 import styles from './page.module.scss';
 import { AboutPresenter } from './page.presenter';
@@ -14,11 +15,11 @@ export default function AboutPage() {
         <Box component="section" className={styles.heroSection}>
           <Stack gap="xl">
             <Group justify="center" gap="xl" className={styles.heroContent}>
-              <Avatar
+              <Image
                 src={personalInfo.avatarSrc}
                 alt={personalInfo.name}
-                size={180}
-                radius="xl"
+                width={180}
+                height={180}
                 className={styles.avatar}
               />
 
