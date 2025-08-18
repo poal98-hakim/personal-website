@@ -2,6 +2,8 @@
 
 A modern, responsive personal portfolio website showcasing professional experience as a Senior Frontend Engineer. Built with Next.js 15, TypeScript, and Mantine UI, featuring a clean design and comprehensive project showcase.
 
+**🌐 [View Live Website](https://hakimabdelcadir.vercel.app/)**
+
 ![Portfolio Website](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
 ![Mantine](https://img.shields.io/badge/Mantine-8-339af0?style=for-the-badge&logo=mantine)
