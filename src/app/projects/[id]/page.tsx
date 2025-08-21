@@ -1,16 +1,6 @@
 import { formatDate } from '@/utils/date';
-import {
-  Anchor,
-  Badge,
-  Box,
-  Button,
-  Card,
-  Container,
-  Group,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { ExternalLink } from '@/components';
+import { Badge, Box, Button, Card, Container, Group, Stack, Text, Title } from '@mantine/core';
 import {
   IconArrowLeft,
   IconBrandLinkedin,
@@ -156,11 +146,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                     </Title>
                     <Stack gap="sm">
                       {viewModel.externalLinks.map((link, index) => (
-                        <Anchor
+                        <ExternalLink
                           key={index}
                           href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          label={link.label}
                           className={styles.externalLink}
                         >
                           <Group gap="sm">
@@ -172,7 +161,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                             <Text>{link.label}</Text>
                             <IconExternalLink size={14} />
                           </Group>
-                        </Anchor>
+                        </ExternalLink>
                       ))}
                     </Stack>
                   </Stack>

@@ -1,5 +1,7 @@
+'use client';
 import { Card, Group, Stack, Text, ThemeIcon, Title } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
+import { addOutboundTracking } from '@/utils/posthog';
 import styles from '../../page.module.scss';
 import { socialIconMapping } from './SocialCard.constants';
 import type { SocialCardProps } from './SocialCard.model';
@@ -16,6 +18,7 @@ export function SocialCard({ social }: SocialCardProps) {
       href={social.href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={addOutboundTracking(social.href, social.name)}
     >
       <Stack gap="md" className={styles.socialCardContent}>
         <Group gap="sm" className={styles.socialCardHeader}>

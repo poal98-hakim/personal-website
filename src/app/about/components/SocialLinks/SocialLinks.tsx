@@ -1,5 +1,6 @@
-import { Anchor, Group, Stack, Text } from '@mantine/core';
+import { Group, Stack, Text } from '@mantine/core';
 import { IconBrandGithub, IconBrandLinkedin, IconBrandStackoverflow } from '@tabler/icons-react';
+import { ExternalLink } from '@/components';
 import styles from './SocialLinks.module.scss';
 import type { SocialLinksProps } from './SocialLinks.model';
 
@@ -16,11 +17,10 @@ export function SocialLinks({ socialLinks }: SocialLinksProps) {
         const IconComponent =
           iconMapping[social.iconName as keyof typeof iconMapping] || IconBrandGithub;
         return (
-          <Anchor
+          <ExternalLink
             key={social.name}
             href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            label={social.name}
             className={styles.socialLink}
           >
             <Group gap="sm">
@@ -32,7 +32,7 @@ export function SocialLinks({ socialLinks }: SocialLinksProps) {
                 </Text>
               </Stack>
             </Group>
-          </Anchor>
+          </ExternalLink>
         );
       })}
     </Stack>

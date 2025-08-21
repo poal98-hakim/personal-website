@@ -112,6 +112,14 @@ export default function AboutPage() {
           </Group>
         </Stack>
       </Container>
+
+      {/* Privacy Notice */}
+      <Container size="lg" mt="xl" mb="xl">
+        <Text size="sm" c="dimmed" ta="center">
+          This site uses PostHog to collect anonymous analytics about visits and usage. No personal
+          information is stored.
+        </Text>
+      </Container>
     </Box>
   );
 }

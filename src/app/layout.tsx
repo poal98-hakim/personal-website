@@ -1,6 +1,5 @@
-import { Header } from '@/components/Header';
-import { MantineProvider } from '@/providers';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { Header } from '@/components';
+import { MantineProvider, PostHogProvider } from '@/providers';
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 
@@ -69,11 +68,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
-        <MantineProvider>
-          <Header />
-          <main className="container">{children}</main>
-        </MantineProvider>
-        {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
+        <PostHogProvider>
+          <MantineProvider>
+            <Header />
+            <main className="container">{children}</main>
+          </MantineProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
