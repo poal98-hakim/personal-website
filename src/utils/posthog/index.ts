@@ -1,2 +1,1 @@
-export * from './mantine';
 export * from './posthog';
