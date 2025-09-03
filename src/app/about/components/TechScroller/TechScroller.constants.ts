@@ -20,6 +20,7 @@ import {
   SiStorybook,
   SiStyledcomponents,
   SiTypescript,
+  SiTailwindcss,
 } from 'react-icons/si';
 import { TbApi, TbBrandReactNative, TbTestPipe } from 'react-icons/tb';
 import type { IconType } from 'react-icons';
@@ -36,6 +37,7 @@ export const iconMapping: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   'styled-components': SiStyledcomponents,
   mantine: SiMantine,
+  tailwindcss: SiTailwindcss,
   jest: SiJest,
   playwright: TbTestPipe,
   storybook: SiStorybook,
@@ -51,4 +53,5 @@ export const iconMapping: Record<string, IconType> = {
   redux: SiRedux,
   d3js: SiD3Dotjs,
   expo: SiReact, // Using React icon as fallback for Expo
+  zustand: SiReact, // Fallback icon for Zustand
 };

@@ -31,6 +31,11 @@
       "color": "#764ABC"
     },
     {
+      "name": "Zustand",
+      "icon": "zustand",
+      "color": "#000000"
+    },
+    {
       "name": "D3.js",
       "icon": "d3js",
       "color": "#F68E56"
@@ -61,6 +66,11 @@
       "name": "Mantine",
       "icon": "mantine",
       "color": "#339AF0"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "tailwindcss",
+      "color": "#06B6D4"
     },
     {
       "name": "CSS",

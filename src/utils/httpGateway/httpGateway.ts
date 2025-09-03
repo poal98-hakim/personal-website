@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosError, AxiosInstance } from 'axios';
 import type { HttpGateway, HttpRequestConfig } from './httpGateway.model';
 import { HttpError } from './httpGateway.model';
 
