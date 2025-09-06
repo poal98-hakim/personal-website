@@ -90,10 +90,7 @@ class ProjectsRepository {
             !repo.archived // Exclude archived repositories
         )
         .sort((a, b) => {
-          // Sort by stars first, then by last updated
-          if (a.stargazers_count !== b.stargazers_count) {
-            return b.stargazers_count - a.stargazers_count;
-          }
+          // Sort by last updated
           return new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime();
         });
 

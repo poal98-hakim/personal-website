@@ -25,8 +25,17 @@ export function mapGithubRepoToPM(repo: GithubRepoDTO): ProjectPM {
     tags: [...(repo.language ? [repo.language] : []), ...repo.topics],
     lastUpdated: repo.pushed_at,
     externalLinks: [
+      ...(repo.homepage
+        ? [
+            {
+              type: 'website' as const,
+              label: 'Website',
+              url: repo.homepage,
+            },
+          ]
+        : []),
       {
-        type: 'website' as const,
+        type: 'github' as const,
         label: 'View on GitHub',
         url: repo.html_url,
       },

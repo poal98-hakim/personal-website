@@ -20,6 +20,7 @@ export interface GithubRepoDTO {
   name: string;
   full_name: string;
   description: string | null;
+  homepage: string;
   html_url: string;
   stargazers_count: number;
   language: string | null;

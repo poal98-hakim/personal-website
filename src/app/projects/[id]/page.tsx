@@ -1,8 +1,9 @@
-import { formatDate } from '@/utils/date';
 import { ExternalLink } from '@/components';
+import { formatDate } from '@/utils/date';
 import { Badge, Box, Button, Card, Container, Group, Stack, Text, Title } from '@mantine/core';
 import {
   IconArrowLeft,
+  IconBrandGithub,
   IconBrandLinkedin,
   IconCode,
   IconExternalLink,
@@ -10,6 +11,8 @@ import {
 } from '@tabler/icons-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { JSX } from 'react';
+import type { ExternalLinkVM } from './page.model';
 import styles from './page.module.scss';
 import { ProjectDetailPresenter } from './page.presenter';
 
@@ -33,6 +36,18 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   if (viewModel.error) {
     notFound();
   }
+
+  const getIconType = (type: ExternalLinkVM['type']): JSX.Element => {
+    switch (type) {
+      case 'linkedin':
+        return <IconBrandLinkedin size={18} />;
+      case 'github':
+        return <IconBrandGithub size={18} />;
+      case 'website':
+      default:
+        return <IconWorld size={18} />;
+    }
+  };
 
   return (
     <Box className={styles.projectDetailPage}>
@@ -153,11 +168,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                           className={styles.externalLink}
                         >
                           <Group gap="sm">
-                            {link.type === 'linkedin' ? (
-                              <IconBrandLinkedin size={18} />
-                            ) : (
-                              <IconWorld size={18} />
-                            )}
+                            {getIconType(link.type)}
                             <Text>{link.label}</Text>
                             <IconExternalLink size={14} />
                           </Group>

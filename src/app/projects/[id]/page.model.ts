@@ -8,11 +8,13 @@ export interface ProjectDetailViewModel {
   tags: string[];
   achievements?: string[];
   lastUpdated?: string;
-  externalLinks?: {
-    type: 'linkedin' | 'website';
-    label: string;
-    url: string;
-  }[];
+  externalLinks?: ExternalLinkVM[];
   loading: boolean;
   error: string | null;
+}
+
+export interface ExternalLinkVM {
+  type: 'linkedin' | 'website' | 'github';
+  label: string;
+  url: string;
 }

@@ -11,7 +11,7 @@ export interface ProjectPM {
   achievements?: string[];
   lastUpdated?: string;
   externalLinks?: {
-    type: 'linkedin' | 'website';
+    type: 'linkedin' | 'website' | 'github';
     label: string;
     url: string;
   }[];
