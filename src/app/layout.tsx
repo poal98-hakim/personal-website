@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://hakimabdelcadir.vercel.app'),
   verification: {
-    google: 'google-site-verification=nPTECPBzGNe9ARNQDD8L5srROtpsmPkZYTpEXbiV2ms',
+    google: 'bghE5pv-QSn7G1Zb_BYZWVZZfxuREtMJ9B22GnxQezY',
   },
   title: 'Hakim Abdelcadir - My Portfolio',
   description:
