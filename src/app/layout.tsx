@@ -20,6 +20,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hakimabdelcadir.vercel.app'),
+  verification: {
+    google: 'google-site-verification=nPTECPBzGNe9ARNQDD8L5srROtpsmPkZYTpEXbiV2ms',
+  },
   title: 'Hakim Abdelcadir - My Portfolio',
   description:
     'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
