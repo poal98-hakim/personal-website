@@ -1,6 +1,7 @@
 import projectsData from '@/data/projects.json';
 import { httpGateway } from '@/utils/httpGateway';
 import { Result, err, ok } from '@/utils/result';
+import { env } from '../../../env';
 import type { GithubRepoDTO, ProjectDTO } from './projects.model';
 
 class ProjectsService {
@@ -14,7 +15,7 @@ class ProjectsService {
         Accept: 'application/vnd.github+json',
       };
 
-      const githubToken = process.env.GITHUB_TOKEN;
+      const githubToken = env.GITHUB_TOKEN;
       if (githubToken) {
         headers['Authorization'] = `Bearer ${githubToken}`;
       }

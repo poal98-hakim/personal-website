@@ -3,11 +3,12 @@ import { usePathname } from 'next/navigation';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 import { useEffect } from 'react';
+import { env } from '../../../env';
 
 export default function PostHogrovider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
-  const host = process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com';
+  const key = env.POSTHOG_API_KEY;
+  const host = env.POSTHOG_HOST || 'https://eu.i.posthog.com';
 
   useEffect(() => {
     // Tag all events from this site

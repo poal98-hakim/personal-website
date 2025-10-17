@@ -5,6 +5,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google';
 
 import '@/styles/globals.scss';
 import '@mantine/core/styles.css';
+import { env } from '../../env';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hakimabdelcadir.vercel.app'),
+  metadataBase: new URL(env.SITE_URL),
   verification: {
     google: 'bghE5pv-QSn7G1Zb_BYZWVZZfxuREtMJ9B22GnxQezY',
   },
@@ -39,14 +40,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://hakimabdelcadir.vercel.app',
+    url: env.SITE_URL,
     title: 'Hakim Abdelcadir - Senior Frontend Engineer',
     description:
       'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
     siteName: 'Hakim Abdelcadir Portfolio',
     images: [
       {
-        url: '/profile-photo.jpg',
+        url: `${env.SITE_URL}/profile-photo.jpg`,
         width: 800,
         height: 600,
         alt: 'Hakim Abdelcadir - Senior Frontend Engineer',
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     title: 'Hakim Abdelcadir - Senior Frontend Engineer',
     description:
       'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
-    images: ['/profile-photo.jpg'],
+    images: [`${env.SITE_URL}/profile-photo.jpg`],
   },
 };
 
