@@ -15,4 +15,4 @@ export const env = {
   POSTHOG_HOST,
 
   GITHUB_TOKEN,
-};
+} as const;
