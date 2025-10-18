@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hakimabdelcadir.vercel.app
+
+# Sitemaps
+Sitemap: https://hakimabdelcadir.vercel.app/sitemap.xml

@@ -62,6 +62,11 @@ export const metadata: Metadata = {
       'Personal portfolio of Hakim Abdelcadir, Senior Frontend Engineer specializing in React, TypeScript, and modern web development.',
     images: [`${env.SITE_URL}/profile-photo.jpg`],
   },
+  icons: {
+    icon: [{ url: '/favicon.ico' }, { url: '/icon.png' }],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
