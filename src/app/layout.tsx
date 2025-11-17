@@ -1,5 +1,6 @@
 import { Header } from '@/components';
 import { MantineProvider, PostHogProvider } from '@/providers';
+import { ColorSchemeScript } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 
@@ -75,8 +76,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <body>
+        <ColorSchemeScript defaultColorScheme="auto" />
         <PostHogProvider>
           <MantineProvider>
             <Header />

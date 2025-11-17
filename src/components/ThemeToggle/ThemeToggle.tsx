@@ -1,11 +1,12 @@
 'use client';
 
-import { ActionIcon, useMantineColorScheme } from '@mantine/core';
+import { ActionIcon, useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 
 export function ThemeToggle() {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const { toggleColorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme('light');
   const [mounted, setMounted] = useState(false);
 
   // Avoid hydration mismatch by only rendering after component mounts
@@ -34,7 +35,7 @@ export function ThemeToggle() {
       size="lg"
       aria-label="Toggle color scheme"
     >
-      {colorScheme === 'dark' ? (
+      {computedColorScheme === 'dark' ? (
         <IconSun size={20} data-testid="IconSun" />
       ) : (
         <IconMoon size={20} data-testid="IconMoon" />

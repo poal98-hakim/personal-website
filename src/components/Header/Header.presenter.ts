@@ -2,26 +2,29 @@ import type { HeaderVM, NavigationItem } from './Header.model';
 
 export class HeaderPresenter {
   public getNavigationItems(pathname: string): NavigationItem[] {
+    // Normalize pathname to handle trailing slashes
+    const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+
     return [
       {
         label: 'Home',
         href: '/',
-        isActive: pathname === '/',
+        isActive: normalizedPath === '/' || normalizedPath === '',
       },
       {
         label: 'Projects',
         href: '/projects',
-        isActive: pathname.startsWith('/projects'),
+        isActive: normalizedPath.startsWith('/projects'),
       },
       {
         label: 'About',
         href: '/about',
-        isActive: pathname.startsWith('/about'),
+        isActive: normalizedPath.startsWith('/about'),
       },
       {
         label: 'Contact',
         href: '/contact',
-        isActive: pathname.startsWith('/contact'),
+        isActive: normalizedPath.startsWith('/contact'),
       },
     ];
   }
