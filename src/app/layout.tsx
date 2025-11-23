@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(env.SITE_URL),
   verification: {
-    google: 'bghE5pv-QSn7G1Zb_BYZWVZZfxuREtMJ9B22GnxQezY',
+    google: 'y9xUcPL8jCrDt5sfUnOKnqs3J-4APi3Iw7f4JQbCJGE',
   },
   title: 'Hakim Abdelcadir - My Portfolio',
   description:
