@@ -1,3 +1,4 @@
+import type { IconType } from 'react-icons';
 import {
   SiCss3,
   SiD3Dotjs,
@@ -13,17 +14,18 @@ import {
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
   SiPython,
   SiReact,
   SiRedux,
   SiSass,
   SiStorybook,
   SiStyledcomponents,
-  SiTypescript,
+  SiSupabase,
   SiTailwindcss,
+  SiTypescript,
 } from 'react-icons/si';
 import { TbApi, TbBrandReactNative, TbTestPipe } from 'react-icons/tb';
-import type { IconType } from 'react-icons';
 
 // Icon mapping from JSON icon names to React Icons
 export const iconMapping: Record<string, IconType> = {
@@ -54,4 +56,6 @@ export const iconMapping: Record<string, IconType> = {
   d3js: SiD3Dotjs,
   expo: SiReact, // Using React icon as fallback for Expo
   zustand: SiReact, // Fallback icon for Zustand
+  supabase: SiSupabase,
+  postgresql: SiPostgresql,
 };

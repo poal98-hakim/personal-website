@@ -140,6 +140,16 @@
       "name": "REST APIs",
       "icon": "api",
       "color": "#0066CC"
+    },
+    {
+      "name": "Supabase",
+      "icon": "supabase",
+      "color": "#34B27B"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "postgresql",
+      "color": "#336791"
     }
   ]
 }
