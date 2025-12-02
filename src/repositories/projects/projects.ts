@@ -50,7 +50,7 @@ class ProjectsRepository {
   // Get personal projects from GitHub
   async getPersonalProjects(): Promise<Result<ProjectPM[]>> {
     try {
-      // Get GitHub username from profile
+      // 1. Get GitHub username from profile
       const profileResult = profileService.getProfile();
       if (!profileResult.ok) {
         return {
@@ -61,29 +61,42 @@ class ProjectsRepository {
 
       const { githubUsername } = profileResult.data;
 
-      const result = await projectsService.getGithubPersonalProjects(githubUsername);
+      // 2. Fetch GitHub repos + static projects in parallel
+      const [githubResult, staticResult] = await Promise.all([
+        projectsService.getGithubPersonalProjects(githubUsername),
+        projectsService.getPersonalProjects(),
+      ]);
 
-      if (!result.ok) {
-        // Fallback to static data if GitHub fails
-        const staticResult = projectsService.getPersonalProjects();
-        if (staticResult.ok) {
-          const validationResult = z.array(ProjectDTOSchema).safeParse(staticResult.data);
-          if (validationResult.success) {
-            return {
-              ok: true,
-              data: validationResult.data.map(mapDTOtoPM),
-            };
-          }
+      // 3. Map static JSON projects (if any)
+      let staticProjects: ProjectPM[] = [];
+      if (staticResult?.ok) {
+        const validationResult = z.array(ProjectDTOSchema).safeParse(staticResult.data);
+        if (validationResult.success) {
+          staticProjects = validationResult.data.map(mapDTOtoPM);
+        }
+      }
+
+      // 4. If GitHub failed, but we have static projects → return those
+      if (!githubResult?.ok) {
+        if (staticProjects.length > 0) {
+          return {
+            ok: true,
+            data: staticProjects,
+          };
         }
 
+        // No GitHub, no valid static → bubble up GitHub error
         return {
           ok: false,
-          error: result.error,
+          error: githubResult?.error ?? {
+            kind: 'Unknown',
+            message: 'Unable to load personal projects',
+          },
         };
       }
 
-      // Filter and map GitHub repos
-      const filteredRepos = result.data
+      // 5. Filter & map GitHub repos
+      const filteredRepos = githubResult.data
         .filter(
           (repo) =>
             !repo.fork && // Exclude forked repositories
@@ -94,11 +107,14 @@ class ProjectsRepository {
           return new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime();
         });
 
-      const parsedProjects = filteredRepos.map(mapGithubRepoToPM);
+      const githubProjects = filteredRepos.map(mapGithubRepoToPM);
+
+      // 6. Combine static JSON projects + GitHub repos
+      const combinedProjects = [...staticProjects, ...githubProjects];
 
       return {
         ok: true,
-        data: parsedProjects,
+        data: combinedProjects,
       };
     } catch (error) {
       return {

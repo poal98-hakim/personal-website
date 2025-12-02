@@ -106,5 +106,43 @@
       ]
     }
   ],
-  "personal": []
+  "personal": [
+    {
+      "id": "easly-grocery-list-organizer",
+      "title": "Grocery List Organizer: Easly",
+      "subtitle": "Smart, store-aware grocery and shopping list app",
+      "shortDescription": "Easly is a smart grocery list organizer that learns each store’s layout, auto-groups items by aisle, and makes grocery trips faster, calmer, and easier to share with others.",
+      "longDescription": "Designed and built Easly as a fully offline-first grocery list organizer using React Native and Expo, structured with a multi-layer architecture for maintainability and clear separation of concerns. The app stores data locally with SQLite and uses MMKV for lightweight preferences, ensuring fast performance and reliability even offline.\nImplemented smart routing, per-store layouts, and an auto-learning Route Mode: Easly observes how the user actually moves through the store and updates aisle order accordingly, so each shopping session follows the real in-store flow and reduces backtracking. Set up an EAS-based CI/CD pipeline, optimized the App Store presence with a multilingual listing (titles, subtitles, descriptions, keywords, and screenshots), and iterated on an ASO strategy to improve organic discovery.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "SQLite",
+        "Drizzle ORM",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Zustand",
+        "EAS",
+        "ASO",
+        "Offline-first Architecture"
+      ],
+      "achievements": [
+        "Designed and shipped a production-ready iOS app as a solo indie project",
+        "Implemented a multi-layer, offline-first architecture using SQLite + MMKV",
+        "Built smart route mode that auto-learn user flow to minimize backtracking in the store",
+        "Set up CI/CD with EAS for repeatable, automated builds and releases",
+        "Crafted a multilingual App Store listing and iterated on an optimised ASO strategy"
+      ],
+      "lastUpdated": "2025-12-02",
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://easly.h2adigital.com/"
+        }
+      ]
+    }
+  ]
 }
