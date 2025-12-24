@@ -13,7 +13,7 @@ describe('Contact Page Flow - Black Box Integration Tests', () => {
     expect(viewModel.error).toBeNull();
 
     // Check social links data
-    expect(viewModel.socialLinks).toHaveLength(3);
+    expect(viewModel.socialLinks).toHaveLength(4);
 
     // Check contact details
     expect(viewModel.contact.email).toBe('john@example.com');

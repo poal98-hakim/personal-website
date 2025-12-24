@@ -6,7 +6,7 @@ import type { SocialLink } from '../../page.model';
 jest.mock('@tabler/icons-react', () => ({
   IconBrandGithub: () => <div data-testid="github-icon" />,
   IconBrandLinkedin: () => <div data-testid="linkedin-icon" />,
-  IconBrandTwitter: () => <div data-testid="twitter-icon" />,
+  IconBrandX: () => <div data-testid="x-icon" />,
 }));
 
 describe('SocialLinks', () => {

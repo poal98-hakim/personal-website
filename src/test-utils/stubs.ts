@@ -26,6 +26,15 @@ export const profileStub = {
       stats: 'Senior Engineer',
     },
     {
+      name: 'X',
+      platform: 'Social Network',
+      description: 'Product updates',
+      href: 'https://x.com/johndoe',
+      icon: 'x',
+      color: 'dark',
+      stats: 'Product updates',
+    },
+    {
       name: 'Stack Overflow',
       platform: 'Developer Community',
       description: 'Helping other developers',

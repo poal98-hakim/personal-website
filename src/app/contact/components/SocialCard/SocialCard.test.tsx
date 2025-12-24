@@ -7,6 +7,7 @@ jest.mock('@tabler/icons-react', () => ({
   IconBrandGithub: () => <div data-testid="github-icon" />,
   IconBrandLinkedin: () => <div data-testid="linkedin-icon" />,
   IconBrandStackoverflow: () => <div data-testid="stackoverflow-icon" />,
+  IconBrandX: () => <div data-testid="x-icon" />,
   IconExternalLink: () => <div data-testid="external-link-icon" />,
 }));
 

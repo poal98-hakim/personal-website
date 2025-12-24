@@ -28,7 +28,7 @@ describe('About Page Flow - Black Box Integration Tests', () => {
     expect(viewModel.experience.description).toContain('React applications');
 
     // Check social links
-    expect(viewModel.socialLinks).toHaveLength(3);
+    expect(viewModel.socialLinks).toHaveLength(4);
     expect(viewModel.socialLinks[0].name).toBe('GitHub');
     expect(viewModel.socialLinks[0].href).toBe('https://github.com/johndoe');
     expect(viewModel.socialLinks[0].iconName).toBe('github');

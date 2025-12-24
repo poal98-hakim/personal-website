@@ -1,5 +1,10 @@
 import { Group, Stack, Text } from '@mantine/core';
-import { IconBrandGithub, IconBrandLinkedin, IconBrandStackoverflow } from '@tabler/icons-react';
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandStackoverflow,
+  IconBrandX,
+} from '@tabler/icons-react';
 import { ExternalLink } from '@/components';
 import styles from './SocialLinks.module.scss';
 import type { SocialLinksProps } from './SocialLinks.model';
@@ -8,6 +13,7 @@ const iconMapping = {
   github: IconBrandGithub,
   linkedin: IconBrandLinkedin,
   stackoverflow: IconBrandStackoverflow,
+  x: IconBrandX,
 };
 
 export function SocialLinks({ socialLinks }: SocialLinksProps) {

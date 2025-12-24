@@ -24,6 +24,15 @@
       "stats": "Senior Frontend Engineer"
     },
     {
+      "name": "X",
+      "platform": "Social Network",
+      "description": "Product updates and release notes.",
+      "href": "https://x.com/hakim98bologna",
+      "icon": "x",
+      "color": "dark",
+      "stats": "Product updates"
+    },
+    {
       "name": "Stack Overflow",
       "platform": "Developer Community",
       "description": "See my contributions to the developer community through questions, answers, and knowledge sharing.",

@@ -49,7 +49,7 @@ describe('Home Page Flow - Black Box Integration Tests', () => {
     expect(viewModel.stats.technologiesCount).toBe(12);
 
     // Check social links
-    expect(viewModel.socialLinks).toHaveLength(3);
+    expect(viewModel.socialLinks).toHaveLength(4);
 
     // Should count both professional and personal projects
     expect(viewModel.stats.projectsCount).toBe(3);

@@ -5,6 +5,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandStackoverflow,
+  IconBrandX,
   IconCode,
   IconRocket,
 } from '@tabler/icons-react';
@@ -152,7 +153,9 @@ export default async function Home() {
                       ? IconBrandLinkedin
                       : link.icon === 'stackoverflow'
                         ? IconBrandStackoverflow
-                        : null;
+                        : link.icon === 'x'
+                          ? IconBrandX
+                          : null;
 
                 if (!IconComponent) return null;
 
