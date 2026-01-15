@@ -143,6 +143,41 @@
           "url": "https://easly.h2adigital.com/"
         }
       ]
+    },
+    {
+      "id": "wingman-ai-chatwing",
+      "title": "Wingman AI: ChatWing",
+      "subtitle": "AI-powered dating assistant for reply generation",
+      "shortDescription": "ChatWing is a dating reply assistant that turns screenshots or pasted chats into suggestions across distinct tones, helping users respond quickly while keeping the conversation natural.",
+      "longDescription": "Designed and built ChatWing as a production iOS app using React Native, Expo, and TypeScript with Supabase (Auth and Postgres) for backend services, plus Superwall for paywalls, PostHog for analytics, and Supabase Edge Functions to call the OpenAI API. The core flow supports screenshot upload with signed URLs or direct text input, analyzes context and tone, and returns multiple short reply options.\nShipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Supabase Edge Functions",
+        "Zustand",
+        "OpenAI Responses API",
+        "Superwall",
+        "PostHog",
+        "ASO"
+      ],
+      "achievements": [
+        "Built screenshot upload and signed URL handling with context-aware reply generation",
+        "Implemented strict JSON schema outputs with PG-13",
+        "Optimized App Store presence with multilingual metadata and ASO iterations"
+      ],
+      "lastUpdated": "2026-01-15",
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://chatwing.h2adigital.com/"
+        }
+      ]
     }
   ]
 }

@@ -72,7 +72,10 @@ class ProjectsRepository {
       if (staticResult?.ok) {
         const validationResult = z.array(ProjectDTOSchema).safeParse(staticResult.data);
         if (validationResult.success) {
-          staticProjects = validationResult.data.map(mapDTOtoPM);
+          staticProjects = validationResult.data.map(mapDTOtoPM).sort((a, b) => {
+            // Sort by last updated
+            return new Date(b.lastUpdated!).getTime() - new Date(a.lastUpdated!).getTime();
+          });
         }
       }
 
