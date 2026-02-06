@@ -149,7 +149,7 @@
       "title": "Wingman AI: ChatWing",
       "subtitle": "AI-powered dating assistant for reply generation",
       "shortDescription": "ChatWing is a dating reply assistant that turns screenshots or pasted chats into suggestions across distinct tones, helping users respond quickly while keeping the conversation natural.",
-      "longDescription": "Designed and built ChatWing as a production iOS app using React Native, Expo, and TypeScript with Supabase (Auth and Postgres) for backend services, plus Superwall for paywalls, PostHog for analytics, and Supabase Edge Functions to call the OpenAI API. The core flow supports screenshot upload with signed URLs or direct text input, analyzes context and tone, and returns multiple short reply options.\nShipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "longDescription": "Designed and built ChatWing as a production iOS app using React Native, Expo, and TypeScript with Supabase (Auth and Postgres) for backend services, plus Superwall for paywalls, PostHog for analytics, and Supabase Edge Functions to call the OpenAI API. The core flow supports screenshot upload with signed URLs or direct text input, analyzes context and tone, and returns multiple short reply options.\nLocalized the app in multiple languages, then shipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
       "role": "Indie Developer",
       "tags": [
         "React Native",
@@ -178,6 +178,41 @@
           "url": "https://chatwing.h2adigital.com/"
         }
       ]
+    },
+    {
+      "id": "future-baby-generator-genkid",
+      "title": "Future Baby Generator: GenKid",
+      "subtitle": "AI app to generate realistic future baby photos",
+      "shortDescription": "GenKid lets users upload photos of two people and uses AI to generate realistic images of what their future baby could look like.",
+      "longDescription": "Designed and built GenKid as a production iOS app using React Native, Expo, and TypeScript with Supabase for backend services, plus Supabase Edge Functions to orchestrate secure two-photo uploads and AI image generation. The core flow guides users from photo selection to generation, and returns realistic baby image results with a fast and clear experience.\nLocalized the app in multiple languages, then shipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Supabase Edge Functions",
+        "Zustand",
+        "OpenAI Responses API",
+        "Superwall",
+        "PostHog",
+        "ASO"
+      ],
+      "achievements": [
+        "Built a complete two-photo upload flow with secure backend processing",
+        "Implemented AI-powered baby image generation with realism-focused tuning",
+        "Designed an end-to-end UX from onboarding to final result presentation"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://genkid.h2adigital.com/"
+        }
+      ],
+      "lastUpdated": "2026-02-06"
     }
   ]
 }
