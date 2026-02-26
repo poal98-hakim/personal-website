@@ -213,6 +213,41 @@
         }
       ],
       "lastUpdated": "2026-02-06"
+    },
+    {
+      "id": "tattoo-creator-inkforge",
+      "title": "Tattoo Creator: InkForge",
+      "subtitle": "AI tattoo generator with realistic body try-on",
+      "shortDescription": "InkForge lets users describe a tattoo idea, instantly generates a high-quality AI tattoo design, and previews it realistically on their own body before saving or sharing.",
+      "longDescription": "Designed and built InkForge as a production iOS app using React Native, Expo, and TypeScript with Supabase for backend services, plus Supabase Edge Functions to orchestrate prompt-to-image generation. The core flow takes a tattoo concept in natural language, generates polished tattoo design variants, and lets users apply and position them on their own photo for a realistic result.\nLocalized the app in multiple languages, then shipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Supabase Edge Functions",
+        "Zustand",
+        "OpenAI Responses API",
+        "Superwall",
+        "PostHog",
+        "ASO"
+      ],
+      "achievements": [
+        "Built a prompt-to-tattoo generation flow with high-quality style-consistent outputs",
+        "Implemented body try-on preview using user photos and precise placement controls",
+        "Added supporting watermark for free trial users to drive sharing-led user acquisition"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://inkforge.h2adigital.com/"
+        }
+      ],
+      "lastUpdated": "2026-02-26"
     }
   ]
 }
