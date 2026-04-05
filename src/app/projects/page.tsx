@@ -1,16 +1,4 @@
-import { ProjectCard } from '@/components';
-import {
-  Alert,
-  Badge,
-  Box,
-  Container,
-  Divider,
-  Group,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Alert, Badge, Box, Container, Divider, Group, Stack, Text, Title } from '@mantine/core';
 import {
   IconAlertCircle,
   IconBrandGithub,
@@ -18,6 +6,7 @@ import {
   IconCode,
   IconRocket,
 } from '@tabler/icons-react';
+import { ProjectsCarousel } from './components';
 import styles from './page.module.scss';
 import { ProjectsPresenter } from './page.presenter';
 
@@ -89,21 +78,7 @@ export default async function ProjectsPage() {
           )}
 
           {!professional.error && professional.projects.length > 0 && (
-            <SimpleGrid
-              cols={{ base: 1, sm: 2, lg: 3 }}
-              spacing="lg"
-              className={styles.projectsGrid}
-            >
-              {professional.projects.map((project, index) => (
-                <Box
-                  key={project.id}
-                  className={styles.projectCardWrapper}
-                  style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
-                >
-                  <ProjectCard project={project} />
-                </Box>
-              ))}
-            </SimpleGrid>
+            <ProjectsCarousel projects={professional.projects} ariaLabel="professional projects" />
           )}
 
           <Divider my="xl" size="xs" className={styles.sectionDivider} />
@@ -153,25 +128,11 @@ export default async function ProjectsPage() {
           )}
 
           {!personal.error && personal.projects.length > 0 && (
-            <SimpleGrid
-              cols={{ base: 1, sm: 2, lg: 3 }}
-              spacing="lg"
-              className={styles.projectsGrid}
-            >
-              {personal.projects.map((project, index) => (
-                <Box
-                  key={project.id}
-                  className={styles.projectCardWrapper}
-                  style={
-                    {
-                      '--delay': `${(index + professional.projects.length) * 0.1}s`,
-                    } as React.CSSProperties
-                  }
-                >
-                  <ProjectCard project={project} />
-                </Box>
-              ))}
-            </SimpleGrid>
+            <ProjectsCarousel
+              projects={personal.projects}
+              ariaLabel="personal projects"
+              delayOffset={professional.projects.length}
+            />
           )}
         </Stack>
       </Container>

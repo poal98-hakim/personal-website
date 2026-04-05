@@ -1,0 +1,142 @@
+.carouselShell {
+  position: relative;
+  margin: var(--mantine-spacing-xl) 0;
+  padding-inline: 3.25rem;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-sm) {
+    padding-inline: 0;
+  }
+}
+
+.viewport {
+  position: relative;
+}
+
+.viewportFades {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: var(--mantine-spacing-sm);
+    width: 4rem;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--mantine-color-body) 0%, transparent 100%);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--mantine-color-body) 0%, transparent 100%);
+  }
+
+  &[data-show-left-fade='true']::before {
+    opacity: 1;
+  }
+
+  &[data-show-right-fade='true']::after {
+    opacity: 1;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-sm) {
+    &::before,
+    &::after {
+      width: 2.5rem;
+    }
+  }
+}
+
+.projectsCarousel {
+  display: flex;
+  gap: var(--mantine-spacing-lg);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.125rem;
+  padding: 0 0 var(--mantine-spacing-sm);
+  scrollbar-width: thin;
+  scrollbar-color: var(--mantine-color-gray-4) transparent;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--mantine-color-gray-4);
+    border-radius: 999px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  [data-mantine-color-scheme='dark'] & {
+    scrollbar-color: var(--mantine-color-dark-3) transparent;
+  }
+
+  [data-mantine-color-scheme='dark'] &::-webkit-scrollbar-thumb {
+    background: var(--mantine-color-dark-3);
+  }
+}
+
+.projectCardWrapper {
+  animation: fade-in-up 0.6s ease-out both;
+  animation-delay: var(--delay);
+  flex: 0 0 calc((100% - (var(--mantine-spacing-lg) * 2)) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-lg) {
+    flex-basis: calc((100% - var(--mantine-spacing-lg)) / 2);
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-sm) {
+    flex-basis: 88%;
+  }
+}
+
+.navButton {
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgb(15 23 42 / 16%);
+  background: color-mix(in srgb, var(--mantine-color-body) 82%, var(--mantine-color-blue-5) 18%);
+  border: 1px solid color-mix(in srgb, var(--mantine-color-blue-5) 22%, transparent);
+  color: var(--mantine-color-text);
+
+  &[data-side='left'] {
+    left: 0;
+  }
+
+  &[data-side='right'] {
+    right: 0;
+  }
+
+  &:disabled {
+    opacity: 0.35;
+  }
+
+  @include mantine.smaller-than(mantine.$mantine-breakpoint-sm) {
+    display: none;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

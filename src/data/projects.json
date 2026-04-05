@@ -248,6 +248,76 @@
         }
       ],
       "lastUpdated": "2026-02-26"
+    },
+    {
+      "id": "old-photo-restore-repair-fixa",
+      "title": "Old Photo Restore Repair: Fixa",
+      "subtitle": "AI photo restoration for damaged and faded memories",
+      "shortDescription": "Fixa helps users restore old, blurry, faded, or damaged photos with AI, bringing family memories back with cleaner detail, sharper faces, and improved overall quality.",
+      "longDescription": "Designed and built Fixa as a production iOS app using React Native, Expo, and TypeScript with Supabase for backend services, plus Supabase Edge Functions to orchestrate secure photo uploads and AI-powered restoration workflows. The core flow guides users from image upload to enhanced output, focusing on restoring damaged details, improving clarity, and delivering a fast, simple before-and-after experience.\nLocalized the app in multiple languages, then shipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Supabase Edge Functions",
+        "Zustand",
+        "OpenAI Responses API",
+        "Superwall",
+        "PostHog",
+        "ASO"
+      ],
+      "achievements": [
+        "Built an end-to-end photo restoration flow from upload to enhanced output delivery",
+        "Implemented AI-powered repair for faded, damaged, and low-quality old photos",
+        "Designed a simple before-and-after UX optimized for clarity and fast conversion"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://fixa.h2adigital.com/"
+        }
+      ],
+      "lastUpdated": "2026-03-26"
+    },
+    {
+      "id": "text-to-speech-voxa",
+      "title": "Text to Speech: Voxa",
+      "subtitle": "AI voice generation from text with natural-sounding output",
+      "shortDescription": "Voxa lets users turn written text into natural-sounding speech with AI-generated voices, making it easy to create voiceovers, spoken content, and audio-ready clips in seconds.",
+      "longDescription": "Designed and built Voxa as a production iOS app using React Native, Expo, and TypeScript with Supabase for backend services, plus Supabase Edge Functions to orchestrate secure text submission and AI-powered voice generation workflows. The core flow takes user-written text, transforms it into natural-sounding spoken audio, and returns a fast, clear playback experience focused on simplicity and output quality.\nLocalized the app in multiple languages, then shipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Supabase Edge Functions",
+        "Zustand",
+        "OpenAI Responses API",
+        "Superwall",
+        "PostHog",
+        "ASO"
+      ],
+      "achievements": [
+        "Built an end-to-end text-to-audio generation flow with fast playback delivery",
+        "Implemented AI-powered voice generation focused on natural-sounding output quality",
+        "Designed a simple creation UX optimized for quick conversion from text to speech"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://voxa.h2adigital.com/"
+        }
+      ],
+      "lastUpdated": "2026-04-05"
     }
   ]
 }

@@ -198,15 +198,6 @@
   margin-bottom: 1rem;
 }
 
-.projectsGrid {
-  margin: var(--mantine-spacing-xl) 0;
-}
-
-.projectCardWrapper {
-  animation: fade-in-up 0.6s ease-out both;
-  animation-delay: var(--delay);
-}
-
 /* Animations */
 @keyframes fade-in-up {
   from {
