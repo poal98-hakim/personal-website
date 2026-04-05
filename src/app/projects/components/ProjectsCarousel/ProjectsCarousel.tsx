@@ -13,6 +13,18 @@ export function ProjectsCarousel(props: ProjectsCarouselProps) {
   const railRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const leftButtonStyle: CSSProperties = {
+    position: 'absolute',
+    top: '50%',
+    left: 0,
+    transform: 'translateY(-50%)',
+  };
+  const rightButtonStyle: CSSProperties = {
+    position: 'absolute',
+    top: '50%',
+    right: 0,
+    transform: 'translateY(-50%)',
+  };
 
   function updateScrollState() {
     const rail = railRef.current;
@@ -76,6 +88,7 @@ export function ProjectsCarousel(props: ProjectsCarouselProps) {
         aria-label={`Scroll ${ariaLabel} left`}
         onClick={() => scrollByDirection('left')}
         disabled={!canScrollLeft}
+        style={leftButtonStyle}
       >
         <IconChevronLeft size={18} />
       </ActionIcon>
@@ -110,6 +123,7 @@ export function ProjectsCarousel(props: ProjectsCarouselProps) {
         aria-label={`Scroll ${ariaLabel} right`}
         onClick={() => scrollByDirection('right')}
         disabled={!canScrollRight}
+        style={rightButtonStyle}
       >
         <IconChevronRight size={18} />
       </ActionIcon>
