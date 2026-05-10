@@ -318,6 +318,76 @@
         }
       ],
       "lastUpdated": "2026-04-05"
+    },
+    {
+      "id": "bird-identifier-birdly",
+      "title": "Bird Identifier: Birdly",
+      "subtitle": "AI bird identification from a single photo",
+      "shortDescription": "Birdly helps users identify bird species by uploading a photo, returning likely matches with a fast, simple experience designed for everyday birdwatching and curiosity.",
+      "longDescription": "Designed and built Birdly as a production iOS app using React Native, Expo, and TypeScript with Supabase for backend services, plus Supabase Edge Functions to orchestrate secure photo uploads and AI-powered bird identification workflows. The core flow takes a bird photo, analyzes visual characteristics, and returns likely species results in a clear, easy-to-understand format.\nLocalized the app in multiple languages, then shipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Supabase Edge Functions",
+        "Zustand",
+        "OpenAI Responses API",
+        "Superwall",
+        "PostHog",
+        "ASO"
+      ],
+      "achievements": [
+        "Built an end-to-end bird photo identification flow from upload to species suggestions",
+        "Implemented AI-powered species detection focused on fast and clear results",
+        "Designed a simple user journey optimized for one-tap photo-based identification"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://birdly.h2adigital.com/"
+        }
+      ],
+      "lastUpdated": "2026-05-09"
+    },
+    {
+      "id": "rock-identifier-crystal",
+      "title": "Rock Identifier - Crystal",
+      "subtitle": "AI rock and crystal identification by photo",
+      "shortDescription": "Crystal helps users identify rocks and crystals from photos, delivering quick AI-based matches and a straightforward flow for hobbyists, collectors, and curious learners.",
+      "longDescription": "Designed and built Crystal as a production iOS app using React Native, Expo, and TypeScript with Supabase for backend services, plus Supabase Edge Functions to orchestrate secure image uploads and AI-powered rock and crystal identification workflows. The core flow guides users from taking or uploading a photo to receiving likely material matches with a fast and accessible result experience.\nLocalized the app in multiple languages, then shipped and optimized the App Store listing with multilingual metadata, screenshots, and ASO iterations, and launched a marketing site to support acquisition.",
+      "role": "Indie Developer",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MMKV",
+        "Supabase",
+        "PostgreSQL",
+        "Supabase Edge Functions",
+        "Zustand",
+        "OpenAI Responses API",
+        "Superwall",
+        "PostHog",
+        "ASO"
+      ],
+      "achievements": [
+        "Built a complete photo-to-identification flow for rocks and crystals",
+        "Implemented AI-powered visual matching focused on clarity and usability",
+        "Shipped a conversion-focused UX from capture/upload to final identification result"
+      ],
+      "externalLinks": [
+        {
+          "type": "website",
+          "label": "App Landing Page",
+          "url": "https://crystal.h2adigital.com/"
+        }
+      ],
+      "lastUpdated": "2026-05-10"
     }
   ]
 }
